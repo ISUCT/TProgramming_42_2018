@@ -7,6 +7,7 @@ namespace CourseApp
         static void Main(string[] args)
         {
             Console.WriteLine("Олег Войтович Валентинович");
+            Console.ReadLine();
         }
     }
 }
