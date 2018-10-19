@@ -13,7 +13,6 @@ namespace CourseApp
         {
             float a = 0.8f;
             float b = 0.4f;
-            double y;
             // задание а 
             Console.WriteLine(" a)");
             for (float x = 1.23f; x <= 7.23f; x += 1.2f)
@@ -27,7 +26,7 @@ namespace CourseApp
             foreach (double i in Xm)
             {
                 
-                Console.WriteLine($" X={i} y={Func(i,a,b)}");
+                Console.WriteLine($" X={i} y={Func(i,a,b)} ");
             }
             Console.ReadLine();
         }
