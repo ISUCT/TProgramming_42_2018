@@ -24,7 +24,7 @@ namespace CourseApp
             //задание b 
             Console.WriteLine(" b)");
             double[] Xm = new double[5] { 1.88, 2.26, 3.84, 4.55, 6.21 };
-            foreach (int i in Xm)
+            foreach (double i in Xm)
             {
                 
                 Console.WriteLine($" X={i} y={Func(i,a,b)}");
