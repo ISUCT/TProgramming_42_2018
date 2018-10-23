@@ -6,7 +6,7 @@ namespace CourseApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Лифанов Олег ");
+            Console.WriteLine("Лифанов Олег Роланович");
             Console.ReadLine();
         }
     }
