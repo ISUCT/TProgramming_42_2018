@@ -16,7 +16,7 @@ namespace Function_Lifanov2_42
 
             // ЗАДАНИЕ А
 
-            Console.WriteLine("ЗАДАНИЕ А");
+            Console.WriteLine("ЗАДАНИЕ 1");
             for (double x = 1.1; x <= 3.6; x += 0.5)
             {
                 Console.WriteLine($"y({x})={Func(x, a, b)}");
@@ -24,7 +24,7 @@ namespace Function_Lifanov2_42
 
             // ЗАДАНИЕ B
 
-            Console.WriteLine("ЗАДАНИЕ B");
+            Console.WriteLine("ЗАДАНИЕ 2");
             double[] mas = new double[5] { 1.2, 1.28, 1.36, 1.46, 2.35 };
             foreach (double x in mas)
             {
