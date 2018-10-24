@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Function_Lifanov2_42
+namespace CourseApp
 {
 
     class Program
