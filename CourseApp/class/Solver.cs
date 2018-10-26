@@ -9,4 +9,12 @@ class Solver {
         }
         return answer;
     }
+
+    public static Dictionary<string, double> solveXArray(double a, double b, double[] xs) {
+        Dictionary<string, double> answer = new Dictionary<string, double>();
+        foreach (double x in xs) {
+            answer.Add(x.ToString(), Calculator.calculateY(x, a, b));
+        }
+        return answer;
+    }
 }

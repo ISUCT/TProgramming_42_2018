@@ -11,9 +11,20 @@ class IO {
         data.Add("dX", 0.05);
         return data;
     }
+
+    public static double[] readArray() {
+        double[] data = {.08, .26, .35, .41, .53};
+        return data;
+    }
+
+
     public static void write(Dictionary<string, double> data) {
         foreach (KeyValuePair<string, double> kvp in data) {
             Console.WriteLine("For x = {0} y = {1}", kvp.Key, kvp.Value);
         }
     }
+
+    public static void writeString(string str) {
+        Console.WriteLine(str);
+    }    
 }
