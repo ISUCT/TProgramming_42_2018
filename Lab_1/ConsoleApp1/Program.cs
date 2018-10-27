@@ -27,7 +27,7 @@ namespace ConsoleApp3
             Console.WriteLine();
             Console.WriteLine("Задание B");
             double[] z = new double[5] { 4.48, 3.56, 2.78, 5.28, 3.21 };
-            for (int i = 0; i <= 4; i++)
+            for (int i = 0; i <= z.Length - 1; i++)
             {
                 formula(z[i], a, b);
             }
