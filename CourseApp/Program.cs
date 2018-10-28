@@ -2,9 +2,9 @@
 
 namespace CourseApp
 {
-    class Program
+   public class Program
     {
-        static double Func(double z,float a,float b)
+        public static double Func(double z,float a,float b)
         {
             return ((Math.Pow((z - a), 2.0 / 3) + Math.Pow(Math.Abs(z + b), 1.0 / 5)) / (Math.Pow(z * z - (a + b) * (a + b), 1.0 / 9)));
         }
@@ -17,7 +17,7 @@ namespace CourseApp
             Console.WriteLine(" a)");
             for (float x = 1.23f; x <= 7.23f; x += 1.2f)
             {
-                Console.WriteLine($" x={x} y={Func(x,a,b)}");
+                Console.WriteLine($" x={x} y={Math.Round(Func(x,a,b),3)}");
             }
             Console.WriteLine();
             //задание b 
@@ -26,7 +26,7 @@ namespace CourseApp
             foreach (double i in Xm)
             {
                 
-                Console.WriteLine($" X={i} y={Func(i,a,b)} ");
+                Console.WriteLine($" X={i} y={Math.Round(Func(i,a,b),3)} ");
             }
             Console.ReadLine();
         }
