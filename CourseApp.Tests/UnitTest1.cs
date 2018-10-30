@@ -6,18 +6,18 @@ namespace CourseApp.Tests
 {
     public class UnitTest1
     {
-        Double g = Math.Sqrt(-4);//получение NaN
+        
         [Fact]
         public void Test1()
         {
             var res = Program.Func(0.0,0.8f,0.4f);            
-            Assert.Equal(g, res,3);
+            Assert.Equal(Double.NaN, res,3);
         }
         [Fact]
         public void Test2()
         {
             var res = Program.Func(1.0, 0.8f, 0.4f);
-            Assert.Equal(g, res, 3);
+            Assert.Equal(Double.NaN, res, 3);
         }
         [Fact]
         public void Test3()
@@ -41,7 +41,7 @@ namespace CourseApp.Tests
         public void Test6()
         {
             var res = Program.Func(0.0, 0.0f, 0.0f);
-            Assert.Equal(g, res, 3);
+            Assert.Equal(Double.NaN, res, 3);
         }
         [Fact]
         public void Test7()
