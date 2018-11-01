@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace ConsoleApp3
+namespace ConsoleApp1
 {
-    class Program
+    public partial class Program
     {
 
-        static void formula(double x, double a, double b)
+        public static void formula(double x, double a, double b)
         {
             double y = ((Math.Pow(a, x) - Math.Pow(b, x)) / (Math.Log10(a / b))) * Math.Pow(Math.Sqrt(a * b), 1 / 3);
             Console.WriteLine($"При х = {x} функция y = {Math.Round(y, 4)}");
