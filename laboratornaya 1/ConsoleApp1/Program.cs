@@ -1,12 +1,12 @@
 ﻿using System;
-namespace ConsoleApp1
+namespace Zadanie1
 {
     class Program
     {
         static void Formula(double x)
         {
             double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
-            Console.WriteLine($"При начальном и конечном х = {x} функция y = {Math.Round(y, 4)}");
+            Console.WriteLine($"При х = {x}  функция y = {Math.Round(y, 4)}");
         }
         static void Main()
         {
