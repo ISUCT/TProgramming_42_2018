@@ -2,13 +2,12 @@
 
 namespace ConsoleApp1
 {
-    public partial class Program
+    public class Program
     {
 
-        public static void formula(double x, double a, double b)
+        public static double Formula(double x, double a, double b)
         {
-            double y = ((Math.Pow(a, x) - Math.Pow(b, x)) / (Math.Log10(a / b))) * Math.Pow(Math.Sqrt(a * b), 1 / 3);
-            Console.WriteLine($"При х = {x} функция y = {Math.Round(y, 4)}");
+            return ((Math.Pow(a, x) - Math.Pow(b, x)) / (Math.Log10(a / b))) * Math.Pow(a * b, 1 / 3);          
         }
 
         static void Main()
@@ -19,9 +18,9 @@ namespace ConsoleApp1
             double a = 0.4;
             double b = 0.8;
 
-            for (double x = 3.2; x <= 6.2; x = x + 0.6)
+            for (double x = 3.2; x <= 6.2; x += 0.6)
             {
-                formula(x, a, b);
+                Console.WriteLine($"При x = {x} y = {Formula(x, a, b)}");
             }
 
             Console.WriteLine();
@@ -29,7 +28,7 @@ namespace ConsoleApp1
             double[] z = new double[5] { 4.48, 3.56, 2.78, 5.28, 3.21 };
             for (int i = 0; i <= z.Length - 1; i++)
             {
-                formula(z[i], a, b);
+                Console.WriteLine($"При x = {z[i]} y = {Formula(z[i], a, b)}");
             }
 
 
