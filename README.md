@@ -1,3 +1,3 @@
-﻿# Course of c#
+# Course of c#
 
 Лифанов Олег Роланович

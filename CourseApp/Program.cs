@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CourseApp
 {
 
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -16,23 +16,23 @@ namespace CourseApp
 
             // ЗАДАНИЕ А
 
-            Console.WriteLine("ЗАДАНИЕ 1");
+            Console.WriteLine("ЗАДАНИЕ А");
             for (double x = 1.1; x <= 3.6; x += 0.5)
             {
                 Console.WriteLine($"y({x})={Func(x, a, b)}");
             }
 
-            // ЗАДАНИЕ B
+            // ЗАДАНИЕ В
 
-            Console.WriteLine("ЗАДАНИЕ 2");
-            double[] mas = new double[5] { 1.2, 1.28, 1.36, 1.46, 2.35 };
+            Console.WriteLine("ЗАДАНИЕ В");
+            double[] mas = new double[] { 1.2, 1.28, 1.36, 1.46, 2.35 };
             foreach (double x in mas)
             {
                 Console.WriteLine($"y({x})={Func(x, a, b)}");
             }
             Console.ReadKey();
         }
-        static double Func(double x, double a, double b)
+        public static double Func(double x, double a, double b)
         {
             return ((a + b * x) * (a + b * x) * ((a + b * x) / 2)) / (1 + Math.Log10(a + b * x));
         }
