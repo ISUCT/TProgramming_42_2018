@@ -13,9 +13,12 @@ namespace CourseApp
         {
             float a = 0.8f;
             float b = 0.4f;
-            // задание а 
+            // задание а
+            float xn = 1.23f;//х начальное
+            float xk = 7.23f;//х конечное
+            float dx = 1.2f;//шаг
             Console.WriteLine(" a)");
-            for (float x = 1.23f; x <= 7.23f; x += 1.2f)
+            for (float x = xn; x <= xk; x += dx)
             {
                 Console.WriteLine($" x={x} y={Math.Round(Func(x,a,b),3)}");
             }
