@@ -1,14 +1,9 @@
 ﻿using System;
 namespace Zadanie1
 {
-    class Program
+    public class Program
     {
-        static void Formula(double x)
-        {
-            double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
-            Console.WriteLine($"При х = {x}  функция y = {Math.Round(y, 4)}");
-        }
-        static void Main()
+       static void Main()
         {
             Console.WriteLine("1 вариант");
             for (double x = 0.11; x <= 0.36; x = x + 0.05)
@@ -23,6 +18,12 @@ namespace Zadanie1
                 Formula(z[i]);
             }
             Console.ReadKey();
+        }
+        public static double Formula(double x)
+        {
+            double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
+            Console.WriteLine($"При х = {x}функция y = {Math.Round(y, 2)}");
+            return y;
         }
     }
 }
