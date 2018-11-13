@@ -2,13 +2,12 @@
 
 namespace exercise1
 {
-    class Program
+     public class Program
     {
 
-        static void formula(double i, double a, double b)
+        public static double formula(double i, double a, double b)
         {
-            double y = Math.Log10(Math.Pow(i, 2) - 1) / Math.Log(a * Math.Pow(i, 2) - b, 5);
-            Console.WriteLine($"Для x = {i}, y = {Math.Round(y, 4)}");
+            return Math.Log10(Math.Pow(i, 2) - 1) / Math.Log(a * Math.Pow(i, 2) - b, 5);
         }
 
         static void Main(string[] args)
@@ -20,7 +19,7 @@ namespace exercise1
             Console.WriteLine("Задание 1");
             for (double i = 1.2; i <= 2.2; i = i + 0.2)
             {
-                formula(i, a, b);
+                Console.WriteLine($"При x = {i} y = {formula(i, a, b)}");
             }
 
             Console.WriteLine();
@@ -29,7 +28,7 @@ namespace exercise1
             double[] mass = new double[5] { 1.21, 1.76, 2.53, 3.48, 4.52 };
             for (int i = 0; i < mass.Length; i++)
             {
-                formula(mass[i], a, b);
+                Console.WriteLine($"При x = {mass[i]} y = {formula(mass[i], a, b)}");
             }
 
             Console.ReadKey();
