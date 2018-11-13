@@ -22,7 +22,7 @@ namespace Zadanie1
         public static double Formula(double x)
         {
             double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
-            Console.WriteLine($"При х = {x}функция y = {Math.Round(y, 2)}");
+            Console.WriteLine($"При х = {x} функция y = {Math.Round(y, 2)}");
             return y;
         }
     }
