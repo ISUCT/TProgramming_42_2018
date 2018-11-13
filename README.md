@@ -1,3 +1,3 @@
 # Course of c#
 
-Лифанов Олег Роланович
+Please write your name and surname here
