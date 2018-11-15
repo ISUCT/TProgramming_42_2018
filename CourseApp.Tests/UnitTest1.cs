@@ -11,7 +11,7 @@ namespace CourseApp.Tests
         float xk = 7.23f;//х конечное
         float dx = 1.2f;//шаг
         double[] Xm = new double[5] { 1.88, 2.26, 3.84, 4.55, 6.21 };
-
+        //тесты для проверки функции
         [Fact]
         public void Test1()
         {
