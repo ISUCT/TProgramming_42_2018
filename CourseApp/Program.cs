@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleApp4;
 
 namespace CourseApp
 {
@@ -31,6 +32,8 @@ namespace CourseApp
                 
                 Console.WriteLine($" X={i} y={Math.Round(Func(i,a,b),3)} ");
             }
+            Pig svin = new Pig(50.0f);
+            svin.Info();
             Console.ReadLine();
         }
     }
