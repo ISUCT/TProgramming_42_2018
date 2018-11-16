@@ -3,6 +3,7 @@ using Xunit;
 using CourseApp;
 using ConsoleApp4;
 
+
 namespace CourseApp.Tests
 {
     public class UnitTest1
@@ -12,6 +13,7 @@ namespace CourseApp.Tests
         float dx = 1.2f;//шаг
         double[] Xm = new double[5] { 1.88, 2.26, 3.84, 4.55, 6.21 };
         //тесты для проверки функции
+
         [Fact]
         public void Test1()
         {
