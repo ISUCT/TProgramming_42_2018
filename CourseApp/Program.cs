@@ -2,7 +2,7 @@
 
 namespace exercise1
 {
-     public class Program
+     public class MyProgram
     {
 
         public static double formula(double i, double a, double b)

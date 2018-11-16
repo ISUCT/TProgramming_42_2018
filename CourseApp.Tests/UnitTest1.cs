@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using CourseApp;
+using exercise1;
 
 namespace CourseApp.Tests
 {
@@ -14,18 +14,23 @@ namespace CourseApp.Tests
         [Fact]
         public void Test1()
         {
-            var res = exercise1.formula(0.0, 0.4, 0.8);
-            Assert.Equal(0.0, res);
+            var res = exercise1.MyProgram.formula(0.0, 0.4, 0.8);
+            Assert.Equal(double.NaN, res,3);
         }
 
         [Fact]
         public void Test2()
         {
-            var res = exercise1.formula(xn, 0.0, 0.8);
-            Assert.Equal(0.0, res);
+            var res = exercise1.MyProgram.formula(xn, 0.0, 0.8);
+            Assert.Equal(double.NaN, res,3);
         }
 
-
+        [Fact]
+        public void Test3()
+        {
+            var res = exercise1.MyProgram.formula(xn, 0.4, 0.0);
+            Assert.Equal(1.04, res,3);
+        }
 
     }
 }
