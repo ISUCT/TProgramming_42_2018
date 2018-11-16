@@ -1,7 +1,6 @@
 using System;
 using Xunit;
 using CourseApp;
-using ConsoleApp4;
 
 
 namespace CourseApp.Tests
@@ -149,73 +148,6 @@ namespace CourseApp.Tests
                 j++;
             }
         }
-        //тесты проверки программы Pig
-        [Fact]
-        public void Test15()
-        {
-            Pig svin = new Pig();
-            var res_age = svin.age;
-            var res_salo = svin.salo;
-            var res_pol = svin.pol;
-            Assert.Equal(20, res_age);
-            Assert.Equal(70.0f, res_salo);
-            Assert.Equal("M", res_pol);
-        }
-        [Fact]
-        public void Test16()
-        {
-            Pig svin = new Pig("M");
-            var res_age = svin.age;
-            var res_salo = svin.salo;
-            Assert.Equal(20, res_age);
-            Assert.Equal(70.0f, res_salo);
-          
-        }
-        [Fact]
-        public void Test17()
-        {
-            Pig svin = new Pig("F");
-            var res_age = svin.age;
-            var res_salo = svin.salo;
-            Assert.Equal(15, res_age);
-            Assert.Equal(45.0f, res_salo);
-           
-        }
-        [Fact]
-        public void Test18()
-        {
-            Pig svin = new Pig(57.5f);
-            var res_age = svin.age;
-            var res_pol = svin.pol;
-            Assert.Equal(20, res_age);
-            Assert.Equal("M", res_pol);
-        }
-        [Fact]
-        public void Test19()
-        {
-            Pig svin = new Pig(37.5f);
-            var res_age = svin.age;
-            var res_pol = svin.pol;
-            Assert.Equal(15, res_age);
-            Assert.Equal("F", res_pol);
-        }
-        [Fact]
-        public void Test20()
-        {
-            Pig svin = new Pig(17);
-            var res_salo = svin.salo;
-            var res_pol = svin.pol;
-            Assert.Equal(65.0f, res_salo);
-            Assert.Equal("M", res_pol);
-        }
-        [Fact]
-        public void Test21()
-        {
-            Pig svin = new Pig(8);
-            var res_salo = svin.salo;
-            var res_pol = svin.pol;
-            Assert.Equal(45.0f, res_salo);
-            Assert.Equal("F", res_pol);
-        }
+       
     }
 }

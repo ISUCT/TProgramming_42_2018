@@ -1,53 +1,53 @@
 ﻿using System;
 
 
-namespace ConsoleApp4
+namespace CourseApp
 {
    public class Pig
     {
-       public float salo;
-       public int age;
-        public string pol;
+       public float Salo { get; set; }
+       public int Age { get; set; }
+        public string Pol { get; set; }
         private byte proverka = 2;//коэфициент проверки
         public Pig()
         {
-            pol = "M";
-            age = 20;
-            salo = 70.0f;
+            Pol = "M";
+            Age = 20;
+            Salo = 70.0f;
         }
         public Pig(string n )
         {
-            pol = n;
-            if (pol == "F")
+            Pol = n;
+            if (Pol == "F")
             {
-                age = 15; salo = 45.0f;
+                Age = 15; Salo = 45.0f;
             }
             else
-            { age = 20; salo = 70.0f; }
+            { Age = 20; Salo = 70.0f; }
         }
         public Pig(float s)
         {
-            salo = s;
-            if (salo <= 70.0f && salo>45.0f)
+            Salo = s;
+            if (Salo <= 70.0f && Salo>45.0f)
             {
-                pol = "M";age = 20;
+                Pol = "M";Age = 20;
             }
-            if (salo <= 45.0f && salo >= 30.0f)
+            if (Salo <= 45.0f && Salo >= 30.0f)
             {
-                pol = "F";age = 15;
+                Pol = "F";Age = 15;
             }
-            if (salo < 30.0f || salo > 70.0f) { Console.WriteLine("ОШИБКА!Вес должен попадать в диапазон[30.0f;70.0f]"); proverka = 0; }
+            if (Salo < 30.0f || Salo > 70.0f) { Console.WriteLine("ОШИБКА!Вес должен попадать в диапазон[30.0f;70.0f]"); proverka = 0; }
         }
         public Pig(int a)
         {
-            age = a;
-            if (age > 15 && age<=20) { pol = "M";salo = 65.0f; }
-            if (age<=15 && age > 1) { pol = "F";salo = 45.0f; }
-            if (age < 1 || age > 20) { Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]"); proverka = 1; }
+            Age = a;
+            if (Age > 15 && Age<=20) { Pol = "M";Salo = 65.0f; }
+            if (Age<=15 && Age > 1) { Pol = "F";Salo = 45.0f; }
+            if (Age < 1 || Age > 20) { Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]"); proverka = 1; }
         }
         public void Info()
         {
-            if (proverka != 0 && proverka !=1) { Console.WriteLine($"Пол: {pol}  Возраст: {age}  Масса сало: {salo}"); }
+            if (proverka != 0 && proverka !=1) { Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}"); }
         }
 
     }
