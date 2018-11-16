@@ -5,8 +5,8 @@ namespace CourseApp
 {
    public class Pig
     {
-       public float Salo { get; set; }
-       public int Age { get; set; }
+        public float Salo { get; set; }
+        public int Age { get; set; }
         public string Pol { get; set; }
         private byte proverka = 2;//коэфициент проверки
         public Pig()
