@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleApp;
 
 namespace CourseApp
 {
@@ -31,6 +32,8 @@ namespace CourseApp
                 Console.WriteLine($"При x = {z[i]} y = {Formula(z[i], a, b)}");
             }
 
+            Television tv = new Television(50,1,8);
+            tv.getInfo();
 
             Console.ReadKey();
         }
