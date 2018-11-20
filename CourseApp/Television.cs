@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace ConsoleApp
+namespace CourseApp
 {
-    class   Television
+    public class Television
     {
         public byte channel { get; set; }
         public byte model { get; set; }
         public byte age { get; set; }
         public Television() { channel = 1; model = 1; age = 0; }
-        public Television(byte c)
+        public Television(byte Channel)
         {
-            channel = c;
+            channel = Channel;
             if (channel >= 100)
             {
                 model = 1; age = 3;
@@ -20,11 +20,11 @@ namespace ConsoleApp
                 model = 2; age = 7;
             }
         }
-        public Television(byte c, byte m, byte a)
+        public Television(byte Channel, byte Model, byte Age)
         {
-            channel = c;
-            model = m;
-            age = a;
+            channel = Channel;
+            model = Model;
+            age = Age;
             if(age > 15)
             {
                 Console.WriteLine("\nВозраст телевизора должен находиться в промежутке от 0 до 15");
