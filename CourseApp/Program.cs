@@ -34,6 +34,8 @@ namespace CourseApp
             }
             Pig svin = new Pig(50.0f);
             svin.Info();
+            svin.graz();
+            svin.ris();
             Console.ReadLine();
         }
     }

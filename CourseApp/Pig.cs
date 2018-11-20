@@ -49,7 +49,20 @@ namespace CourseApp
         {
             if (proverka != 0 && proverka !=1) { Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}"); }
         }
-
+        public void graz()
+        {
+            Console.WriteLine($"свинья возраста {Age} пошла поваляться в грязи  ");
+        }
+        public void ris()
+        {
+            Console.WriteLine(@"     _
+         <`--'\>______
+         /. .  `'     \
+        (`')  ,        @
+         `-._,        /
+            )-)_/--( >  
+           ''''  ''''");
+        }
     }
 
 }
