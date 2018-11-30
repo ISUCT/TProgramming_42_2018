@@ -12,9 +12,10 @@ namespace Zadanie1
         {
             Console.WriteLine($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}");
         }
-        public void display()
+
+        public string display()
         {
-            Console.WriteLine(@"
+            return(@"
 
       +-'~`---------------------------------/\--
  ||"""""""""""""""""""""""""""""""" \\\\\\  \/~)
@@ -34,6 +35,7 @@ namespace Zadanie1
        
 
 ");
+         
         }
     }
 }

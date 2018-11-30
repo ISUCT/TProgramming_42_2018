@@ -34,8 +34,11 @@ namespace Zadanie1
                 mass = 1.4f,
                 emkostmag = 7
             };
-            Colt.GetInfo();
-            Colt.display();
+            Console.WriteLine($"Пистолет {Colt.name} выстрелил: \"Бах!\"");
+            string Pistol = Colt.display();
+            Console.WriteLine(Pistol);
+            Console.ReadKey();
+            
          
 }
     }
