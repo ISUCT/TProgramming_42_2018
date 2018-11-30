@@ -75,5 +75,27 @@ namespace CourseApp.Tests
             Assert.Equal(45.0f, res_salo);
             Assert.Equal("F", res_pol);
         }
+        [Fact]
+        public void Test22()
+        {
+            Pig svin = new Pig();
+            var res_ris = svin.ris();
+            Assert.Equal(@"     _
+         <`--'\>______
+         /. .  `'     \
+        (`')  ,        @
+         `-._,        /
+            )-)_/--( >  
+           ''''  ''''", res_ris);
+          
+        }
+        [Fact]
+        public void Test23()
+        {
+            Pig svin = new Pig();
+            var res_graz = svin.graz();
+            Assert.Equal($"свинья возраста {20} пошла поваляться в грязи  ", res_graz);
+
+        }
     }
 }

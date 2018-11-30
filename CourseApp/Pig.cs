@@ -14,6 +14,8 @@ namespace CourseApp
             Pol = "M";
             Age = 20;
             Salo = 70.0f;
+           
+               
         }
         public Pig(string n )
         {
@@ -47,15 +49,20 @@ namespace CourseApp
         }
         public void Info()
         {
-            if (proverka != 0 && proverka !=1) { Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}"); }
+            if (proverka != 0 && proverka !=1)
+            {
+                Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}");
+                Console.WriteLine(graz());
+            }
         }
-        public void graz()
+        public string graz()
         {
-            Console.WriteLine($"свинья возраста {Age} пошла поваляться в грязи  ");
+
+            return ($"свинья возраста {Age} пошла поваляться в грязи  ");
         }
-        public void ris()
+        public string ris()
         {
-            Console.WriteLine(@"     _
+            return (@"     _
          <`--'\>______
          /. .  `'     \
         (`')  ,        @

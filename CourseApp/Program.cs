@@ -32,10 +32,10 @@ namespace CourseApp
                 
                 Console.WriteLine($" X={i} y={Math.Round(Func(i,a,b),3)} ");
             }
-            Pig svin = new Pig(50.0f);
+            Pig svin = new Pig();
             svin.Info();
-            svin.graz();
-            svin.ris();
+            Console.WriteLine(svin.ris()) ;
+
             Console.ReadLine();
         }
     }
