@@ -4,6 +4,7 @@ namespace Zadanie1
 {
     public class Program
     {
+        public static object Colt { get; set; }
 
         public static double Formula(double x)
         {
@@ -34,7 +35,8 @@ namespace Zadanie1
                 mass = 1.4f,
                 emkostmag = 7
             };
-            Console.WriteLine($"Пистолет {Colt.name} выстрелил: \"Бах!\"");
+            string Info = Colt.GetInfo();
+            Console.WriteLine(Info);
             string Pistol = Colt.display();
             Console.WriteLine(Pistol);
             Console.ReadKey();

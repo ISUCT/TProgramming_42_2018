@@ -46,7 +46,18 @@ namespace CourseApp.Tests
 
 ", pistol);
         }
-
-
+        [Fact]
+        public void Test14()
+        {
+            Pistol Colt = new Pistol();
+            var name = Colt.name;
+            var kalibr = Colt.kalibr;
+            var mass = Colt.mass;
+            var emkostmag = Colt.emkostmag;
+            Assert.Equal("Colt", name);
+            string Pistol = Colt.GetInfo();
+            Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", Pistol);
         }
+
+    }
 }

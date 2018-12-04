@@ -8,9 +8,9 @@ namespace Zadanie1
         public float mass;
         public int emkostmag;
         public Pistol() { name = "Colt";kalibr = 0.45;mass = 1.4f;emkostmag = 7; }
-       public void GetInfo()
+       public string GetInfo()
         {
-            Console.WriteLine($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}");
+            return($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"");
         }
 
         public string display()
@@ -36,6 +36,11 @@ namespace Zadanie1
 
 ");
          
+        }
+
+        public static implicit operator string(Pistol v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
