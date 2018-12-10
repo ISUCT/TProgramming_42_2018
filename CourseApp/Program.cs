@@ -32,7 +32,7 @@ namespace CourseApp
                 Console.WriteLine($"При x = {z[i]} y = {Formula(z[i], a, b)}");
             }
 
-            Television tv = new Television(1,2,15);
+            Television tv = new Television(-11,0,150);
             string TV = tv.GetInfo();
             Console.WriteLine(TV);
             Console.ReadKey();

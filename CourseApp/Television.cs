@@ -4,17 +4,59 @@ namespace CourseApp
 {
     public class Television
     {
-        public int Channel { get; set; }
-        public int Model { get; set; }
-        public byte Age { get; set; }
-        public byte check;
-        public Television() { Channel = 1; Model = 1; Age = 0; }
-        public Television(int channel)
+        private int channel;
+        private int model;
+        private int age;
+        public int Channel
         {
-            Channel = channel;
-            if (channel < 0) { Console.WriteLine("Канал должен быть >= 0"); }
+            get
+            {
+                return channel;
+            }
+            set
+            {
+                if (value < 0)
+                    channel = 0;
+                else if (channel > 255)
+                    channel = 255;
+                else channel = value;
+            }
+       }
+        public int Model
+        {
+            get
+            {
+                return model;
+            }
+            set
+            {
+                if (value <= 1)
+                    model = 1;
+                else if (value >= 2) model = 2;
+            }
+        }
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if (value < 0)
+                    age = 0;
+                else if (value > 15)
+                    age = 15;
+                else age = value;
+            }
+        }
+        public Television() { Channel = 1; Model = 1; Age = 0; }
+        public Television(int ch)
+        {
+            Channel = ch;
+            if (ch < 0) { Console.WriteLine("Канал должен быть >= 0"); }
             else{
-                if (channel >= 100)
+                if (ch >= 100)
                 {
                     Model = 1; Age = 3;
                 }
@@ -23,38 +65,18 @@ namespace CourseApp
                     Model = 2; Age = 7;
                 }
             } }
-        public Television(int channel, int model, byte age)
+        public Television(int ch, int md, byte ag)
         {
-            Channel = channel;
-            Model = model;
-            Age = age;
-            if (channel < 0)
-            {
-                Console.WriteLine("\nКанал должен быть >= 0");
-                check += 1;
-            }
-                if (model != 1 && model != 2)
-            {
-                Console.WriteLine("\nМодель телевизора должна быть 1 или 2");
-                check += 1;
-            }
-            if (age > 15)
-            {
-                Console.WriteLine("\nВозраст телевизора должен находиться в промежутке от 0 до 15");
-                check += 1; 
-            }
-
+            Channel = ch;
+            Model = md;
+            Age = ag;
         }
         public string GetInfo()
         {
             string h = "";
             for (int i = 0; i < 3 - Channel.ToString().Length; i++) h += (Model == 1) ? "▒" : "░";
-            if (check == 0)
-            {
                 if (Model == 1) return ($"\nКанал: {Channel}, Модель телевизора: {Model}, Возвраст телевизора: {Age}\n ▄██████████████████████████████████████▄\n █▀─▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄─▀████████\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌███░░███\n █▐▒▒Канал {Channel}{h}▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌█░░██░░█\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌███░░███\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌████████\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌███░░███\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌█░░██░░█\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌███░░███\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌████████\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌████████\n █▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌████████\n █▄─▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀─▄████████\n ▀██████████████████████████████████████▀\n ───▄▄▄████████████████████████████▄▄▄\n ──████████████████████████████████████");
                 else return ($"\nКанал: {Channel}, Модель телевизора: {Model}, Возвраст телевизора: {Age}\n ██████████░▀▀██████████████▀▀░██████████\n ████████████▄░▀▀████████▀▀░▄████████████\n ███████████████▄█▀▀▀▀▀▀█▄███████████████\n ████████████████▄▄▄▄▄▄▄▄████████████████\n ████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀████\n ███░░▄▄█████████████████████▄░░░▄▄░░░███\n ███░░█▀░Канал {Channel}{h}▄▄▄▄█████████░████░░███\n ███░░█░░░░░░░▄████████████████░░▀▀░░░███\n ███░░█░░░░▄███████████████████░░░░░░░███\n ███░░█░░░█████████████████████░░░░░░░███\n ███░░█░░██████████████████████░░░░░░░███\n ███░░█░███████████████████████░▀███░░███\n ███░░█████████████████████████░▄▄▄▄░░███\n ███░░█████████████████████████░▄▄▄▄░░███\n ███░░▀███████████████████████▀░░▀▀▀░░███\n ███▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄███\n ████████████████████████████████████████");
-            }
-            else return ("");
         }
     }
 }
