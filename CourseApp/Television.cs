@@ -15,9 +15,9 @@ namespace CourseApp
             }
             set
             {
-                if (value < 0)
+                if (value <= 0)
                     channel = 0;
-                else if (channel > 255)
+                else if (value >= 255)
                     channel = 255;
                 else channel = value;
             }
