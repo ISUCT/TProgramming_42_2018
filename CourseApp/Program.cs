@@ -36,7 +36,6 @@ namespace CourseApp
             string TV = tv.GetInfo();
             Console.WriteLine(TV);
             Console.ReadKey();
-        }
 
     }
 }
