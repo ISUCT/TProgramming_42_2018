@@ -2,12 +2,11 @@ using System;
 using Xunit;
 using CourseApp;
 
-
 namespace CourseApp.Tests
 {
     public class UnitTest2
     {
-        //тесты проверки программы Pig
+        // тесты проверки программы Pig
         [Fact]
         public void Test15()
         {
@@ -19,6 +18,7 @@ namespace CourseApp.Tests
             Assert.Equal(70.0f, resSalo);
             Assert.Equal("M", resPol);
         }
+
         [Fact]
         public void Test16()
         {
@@ -27,8 +27,8 @@ namespace CourseApp.Tests
             var resSalo = svin.Salo;
             Assert.Equal(20, resAge);
             Assert.Equal(70.0f, resSalo);
-
         }
+
         [Fact]
         public void Test17()
         {
@@ -37,8 +37,8 @@ namespace CourseApp.Tests
             var resSalo = svin.Salo;
             Assert.Equal(15, resAge);
             Assert.Equal(45.0f, resSalo);
-
         }
+
         [Fact]
         public void Test18()
         {
@@ -48,6 +48,7 @@ namespace CourseApp.Tests
             Assert.Equal(20, resAge);
             Assert.Equal("M", resPol);
         }
+
         [Fact]
         public void Test19()
         {
@@ -57,6 +58,7 @@ namespace CourseApp.Tests
             Assert.Equal(15, resAge);
             Assert.Equal("F", resPol);
         }
+
         [Fact]
         public void Test20()
         {
@@ -66,6 +68,7 @@ namespace CourseApp.Tests
             Assert.Equal(65.0f, resSalo);
             Assert.Equal("M", resPol);
         }
+
         [Fact]
         public void Test21()
         {
@@ -75,27 +78,28 @@ namespace CourseApp.Tests
             Assert.Equal(45.0f, resSalo);
             Assert.Equal("F", resPol);
         }
+
         [Fact]
         public void Test22()
         {
             Pig svin = new Pig();
             var resRis = svin.Ris();
-            Assert.Equal(@"     _
+            Assert.Equal(
+                @"     _
          <`--'\>______
          /. .  `'     \
         (`')  ,        @
          `-._,        /
             )-)_/--( >  
            ''''  ''''", resRis);
-
         }
+
         [Fact]
         public void Test23()
         {
             Pig svin = new Pig();
             var resGraz = svin.Graz();
             Assert.Equal($"свинь€ возраста {20} пошла повал€тьс€ в гр€зи  ", resGraz);
-
         }
     }
 }
