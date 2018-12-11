@@ -30,10 +30,10 @@ namespace Zadanie1
         
             Pistol Colt = new Pistol
             {
-                name = "Colt",
-                kalibr = 0.45,
-                mass = 1.4f,
-                emkostmag = 7
+                Name = "Colt",
+                Kalibr = 0.45,
+                Mass = 1.4f,
+                Emkostmag = 7
             };
             string Info = Colt.GetInfo();
             Console.WriteLine(Info);

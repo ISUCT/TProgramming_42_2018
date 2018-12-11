@@ -10,10 +10,10 @@ namespace CourseApp.Tests
         public void Test12()
         {
             Pistol Colt = new Pistol();
-            var name = Colt.name;
-            var kalibr = Colt.kalibr;
-            var emkostmag = Colt.emkostmag;
-            var mass = Colt.mass;
+            var name = Colt.Name;
+            var kalibr = Colt.Kalibr;
+            var emkostmag = Colt.Emkostmag;
+            var mass = Colt.Mass;
             Assert.Equal("Colt", name);
             Assert.Equal(0.45, kalibr);
             Assert.Equal(7, emkostmag);
@@ -50,10 +50,10 @@ namespace CourseApp.Tests
         public void Test14()
         {
             Pistol Colt = new Pistol();
-            var name = Colt.name;
-            var kalibr = Colt.kalibr;
-            var mass = Colt.mass;
-            var emkostmag = Colt.emkostmag;
+            var name = Colt.Name;
+            var kalibr = Colt.Kalibr;
+            var mass = Colt.Mass;
+            var emkostmag = Colt.Emkostmag;
             Assert.Equal("Colt", name);
             string Pistol = Colt.GetInfo();
             Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", Pistol);
