@@ -12,13 +12,15 @@ namespace Zadanie1
             Console.WriteLine($"при х = {x} функция y = {Math.Round(y, 2)}");
             return y;
         }
-        static void Main()
+
+        private static void Main()
         {
             Console.WriteLine("1 вариант ");
             for (double x = 0.11; x <= 0.36; x = x + 0.05)
             {
                 Formula(x);
             }
+
             Console.WriteLine();
             Console.WriteLine("2 вариант");
             double[] z = new double[5] { 0.2, 0.3, 0.38, 0.43, 0.57 };
@@ -26,22 +28,21 @@ namespace Zadanie1
             {
                 Formula(z[i]);
             }
+
             Console.WriteLine();
-        
-            Pistol Colt = new Pistol
+
+            Pistol colt = new Pistol
             {
                 Name = "Colt",
                 Kalibr = 0.45,
                 Mass = 1.4f,
                 Emkostmag = 7
             };
-            string Info = Colt.GetInfo();
-            Console.WriteLine(Info);
-            string Pistol = Colt.display();
-            Console.WriteLine(Pistol);
+            string info = colt.GetInfo();
+            Console.WriteLine(info);
+            string pistol = colt.Display();
+            Console.WriteLine(pistol);
             Console.ReadKey();
-            
-         
-}
+        }
     }
 }

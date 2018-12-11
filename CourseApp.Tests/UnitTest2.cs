@@ -24,7 +24,7 @@ namespace CourseApp.Tests
         public void Test13()
         {
             Pistol Colt = new Pistol();
-            string pistol = Colt.display();
+            string pistol = Colt.Display();
             Assert.Equal(@"
 
       +-'~`---------------------------------/\--
