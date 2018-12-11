@@ -6,10 +6,10 @@ namespace CourseApp.Tests
 {
     public class UnitTest1
     {
-        double xn = 3.2;
-        double xk = 6.2;
-        double dx = 0.6;
-        double[] z = new double[5] { 4.48, 3.56, 2.78, 5.28, 3.21 };
+        private double xn = 3.2;
+        private double xk = 6.2;
+        private double dx = 0.6;
+        private double[] z = new double[5] { 4.48, 3.56, 2.78, 5.28, 3.21 };
 
         [Fact]
         public void Test1()
@@ -17,18 +17,21 @@ namespace CourseApp.Tests
             var res = Program.Formula(0.0, 0.4, 0.8);
             Assert.Equal(0.0, res);
         }
+
         [Fact]
         public void Test2()
         {
             var res = Program.Formula(xn, 0.0, 0.8);
             Assert.Equal(0.0, res);
         }
+
         [Fact]
         public void Test3()
         {
             var res = Program.Formula(xn, 0.4, 0.0);
             Assert.Equal(0.0, res);
         }
+
         [Fact]
         public void Test4()
         {
@@ -41,6 +44,7 @@ namespace CourseApp.Tests
                 i++;
             }
         }
+
         [Fact]
         public void Test5()
         {
@@ -51,8 +55,5 @@ namespace CourseApp.Tests
                 Assert.Equal(e[i], res, 3);
             }
         }
-
-
-
     }
 }

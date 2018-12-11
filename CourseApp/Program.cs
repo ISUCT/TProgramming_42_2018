@@ -5,13 +5,12 @@ namespace CourseApp
 {
     public class Program
     {
-
         public static double Formula(double x, double a, double b)
         {
-            return ((Math.Pow(a, x) - Math.Pow(b, x)) / (Math.Log10(a / b))) * Math.Pow(a * b, 1 / 3);
+            return ((Math.Pow(a, x) - Math.Pow(b, x)) / Math.Log10(a / b)) * Math.Pow(a * b, 1 / 3);
         }
 
-        static void Main()
+        private static void Main()
         {
             Console.WriteLine("Вариант 7");
             Console.WriteLine();
@@ -33,9 +32,9 @@ namespace CourseApp
             }
 
             Television tv = new Television(3000, 2, 5);
-            string TV = tv.GetInfo();
-            Console.WriteLine(TV);
+            string tV = tv.GetInfo();
+            Console.WriteLine(tV);
             Console.ReadKey();
-
+        }
     }
 }
