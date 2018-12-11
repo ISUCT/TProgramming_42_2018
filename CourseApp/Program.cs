@@ -3,9 +3,9 @@ using CourseApp;
 
 namespace CourseApp
 {
-   public class Program
+    public class Program
     {
-        public static double Func(double z,float a,float b)
+        public static double Func(double z, float a, float b)
         {
             return ((Math.Pow((z - a), 2.0 / 3) + Math.Pow(Math.Abs(z + b), 1.0 / 5)) / (Math.Pow(z * z - (a + b) * (a + b), 1.0 / 9)));
         }
@@ -21,7 +21,7 @@ namespace CourseApp
             Console.WriteLine(" a)");
             for (float x = xn; x <= xk; x += dx)
             {
-                Console.WriteLine($" x={x} y={Math.Round(Func(x,a,b),3)}");
+                Console.WriteLine($" x={x} y={Math.Round(Func(x, a, b), 3)}");
             }
             Console.WriteLine();
             //задание b 
@@ -29,12 +29,12 @@ namespace CourseApp
             double[] Xm = new double[5] { 1.88, 2.26, 3.84, 4.55, 6.21 };
             foreach (double i in Xm)
             {
-                
-                Console.WriteLine($" X={i} y={Math.Round(Func(i,a,b),3)} ");
+
+                Console.WriteLine($" X={i} y={Math.Round(Func(i, a, b), 3)} ");
             }
-            Pig svin = new Pig();
+            Pig svin = new Pig(100.0f);
             svin.Info();
-            Console.WriteLine(svin.ris()) ;
+            Console.WriteLine(svin.Ris());
 
             Console.ReadLine();
         }

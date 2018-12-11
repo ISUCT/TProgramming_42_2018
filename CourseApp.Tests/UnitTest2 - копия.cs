@@ -12,89 +12,89 @@ namespace CourseApp.Tests
         public void Test15()
         {
             Pig svin = new Pig();
-            var res_age = svin.Age;
-            var res_salo = svin.Salo;
-            var res_pol = svin.Pol;
-            Assert.Equal(20, res_age);
-            Assert.Equal(70.0f, res_salo);
-            Assert.Equal("M", res_pol);
+            var resAge = svin.Age;
+            var resSalo = svin.Salo;
+            var resPol = svin.Pol;
+            Assert.Equal(20, resAge);
+            Assert.Equal(70.0f, resSalo);
+            Assert.Equal("M", resPol);
         }
         [Fact]
         public void Test16()
         {
             Pig svin = new Pig("M");
-            var res_age = svin.Age;
-            var res_salo = svin.Salo;
-            Assert.Equal(20, res_age);
-            Assert.Equal(70.0f, res_salo);
+            var resAge = svin.Age;
+            var resSalo = svin.Salo;
+            Assert.Equal(20, resAge);
+            Assert.Equal(70.0f, resSalo);
 
         }
         [Fact]
         public void Test17()
         {
             Pig svin = new Pig("F");
-            var res_age = svin.Age;
-            var res_salo = svin.Salo;
-            Assert.Equal(15, res_age);
-            Assert.Equal(45.0f, res_salo);
+            var resAge = svin.Age;
+            var resSalo = svin.Salo;
+            Assert.Equal(15, resAge);
+            Assert.Equal(45.0f, resSalo);
 
         }
         [Fact]
         public void Test18()
         {
             Pig svin = new Pig(57.5f);
-            var res_age = svin.Age;
-            var res_pol = svin.Pol;
-            Assert.Equal(20, res_age);
-            Assert.Equal("M", res_pol);
+            var resAge = svin.Age;
+            var resPol = svin.Pol;
+            Assert.Equal(20, resAge);
+            Assert.Equal("M", resPol);
         }
         [Fact]
         public void Test19()
         {
             Pig svin = new Pig(37.5f);
-            var res_age = svin.Age;
-            var res_pol = svin.Pol;
-            Assert.Equal(15, res_age);
-            Assert.Equal("F", res_pol);
+            var resAge = svin.Age;
+            var resPol = svin.Pol;
+            Assert.Equal(15, resAge);
+            Assert.Equal("F", resPol);
         }
         [Fact]
         public void Test20()
         {
             Pig svin = new Pig(17);
-            var res_salo = svin.Salo;
-            var res_pol = svin.Pol;
-            Assert.Equal(65.0f, res_salo);
-            Assert.Equal("M", res_pol);
+            var resSalo = svin.Salo;
+            var resPol = svin.Pol;
+            Assert.Equal(65.0f, resSalo);
+            Assert.Equal("M", resPol);
         }
         [Fact]
         public void Test21()
         {
             Pig svin = new Pig(8);
-            var res_salo = svin.Salo;
-            var res_pol = svin.Pol;
-            Assert.Equal(45.0f, res_salo);
-            Assert.Equal("F", res_pol);
+            var resSalo = svin.Salo;
+            var resPol = svin.Pol;
+            Assert.Equal(45.0f, resSalo);
+            Assert.Equal("F", resPol);
         }
         [Fact]
         public void Test22()
         {
             Pig svin = new Pig();
-            var res_ris = svin.ris();
+            var resRis = svin.Ris();
             Assert.Equal(@"     _
          <`--'\>______
          /. .  `'     \
         (`')  ,        @
          `-._,        /
             )-)_/--( >  
-           ''''  ''''", res_ris);
-          
+           ''''  ''''", resRis);
+
         }
         [Fact]
         public void Test23()
         {
             Pig svin = new Pig();
-            var res_graz = svin.graz();
-            Assert.Equal($"свинья возраста {20} пошла поваляться в грязи  ", res_graz);
+            var resGraz = svin.Graz();
+            Assert.Equal($"свинья возраста {20} пошла поваляться в грязи  ", resGraz);
 
         }
     }

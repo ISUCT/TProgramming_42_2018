@@ -16,8 +16,8 @@ namespace CourseApp.Tests
         [Fact]
         public void Test1()
         {
-            var res = Program.Func(0.0,0.8f,0.4f);            
-            Assert.Equal(Double.NaN, res,3);
+            var res = Program.Func(0.0, 0.8f, 0.4f);
+            Assert.Equal(Double.NaN, res, 3);
         }
         [Fact]
         public void Test2()
@@ -53,13 +53,13 @@ namespace CourseApp.Tests
         public void Test7()
         {
             int i = 0;
-            double[] p = new double[6] { 2.237,2.216,2.527,2.785,3.008,3.205 };//вектор ответов 
+            double[] p = new double[6] { 2.237, 2.216, 2.527, 2.785, 3.008, 3.205 };//вектор ответов 
             for (float x = xn; x <= xk; x += dx)
             {
-                var res = Program.Func(x, 0.8f, 0.4f);         
-                    Assert.Equal(p[i], res, 3);
+                var res = Program.Func(x, 0.8f, 0.4f);
+                Assert.Equal(p[i], res, 3);
                 i++;
-            }            
+            }
         }
         [Fact]
         public void Test8()
@@ -103,14 +103,14 @@ namespace CourseApp.Tests
         [Fact]
         public void Test11()
         {
-            int j = 0; 
-            double[] q = new double[5] { 2.056, 2.167, 2.575, 2.729,3.039 };//вектор ответов
+            int j = 0;
+            double[] q = new double[5] { 2.056, 2.167, 2.575, 2.729, 3.039 };//вектор ответов
             for (int i = 0; i < Xm.Length; i++)
             {
                 var res = Program.Func(Xm[i], 0.8f, 0.4f);
                 Assert.Equal(q[j], res, 3);
                 j++;
-            }       
+            }
         }
         [Fact]
         public void Test12()
@@ -148,6 +148,6 @@ namespace CourseApp.Tests
                 j++;
             }
         }
-       
+
     }
 }
