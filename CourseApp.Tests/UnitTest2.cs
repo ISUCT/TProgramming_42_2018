@@ -49,13 +49,13 @@ namespace CourseApp.Tests
         [Fact]
         public void Test14()
         {
-            Pistol сolt = new Pistol();
-            var name = сolt.Name;
-            var kalibr = сolt.Kalibr;
-            var mass = сolt.Mass;
-            var emkostmag = сolt.Emkostmag;
+            Pistol colt = new Pistol();
+            var name = colt.Name;
+            var kalibr = colt.Kalibr;
+            var mass = colt.Mass;
+            var emkostmag = colt.Emkostmag;
             Assert.Equal("Colt", name);
-            string Pistol = сolt.GetInfo();
+            string Pistol = colt.GetInfo();
             Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", Pistol);
         }
 
