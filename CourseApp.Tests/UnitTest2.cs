@@ -9,11 +9,11 @@ namespace CourseApp.Tests
         [Fact]
         public void Test12()
         {
-            Pistol Colt = new Pistol();
-            var name = Colt.Name;
-            var kalibr = Colt.Kalibr;
-            var emkostmag = Colt.Emkostmag;
-            var mass = Colt.Mass;
+            Pistol сolt = new Pistol();
+            var name = сolt.Name;
+            var kalibr = сolt.Kalibr;
+            var emkostmag = сolt.Emkostmag;
+            var mass = сolt.Mass;
             Assert.Equal("Colt", name);
             Assert.Equal(0.45, kalibr);
             Assert.Equal(7, emkostmag);
@@ -49,13 +49,13 @@ namespace CourseApp.Tests
         [Fact]
         public void Test14()
         {
-            Pistol Colt = new Pistol();
-            var name = Colt.Name;
-            var kalibr = Colt.Kalibr;
-            var mass = Colt.Mass;
-            var emkostmag = Colt.Emkostmag;
+            Pistol сolt = new Pistol();
+            var name = сolt.Name;
+            var kalibr = сolt.Kalibr;
+            var mass = сolt.Mass;
+            var emkostmag = сolt.Emkostmag;
             Assert.Equal("Colt", name);
-            string Pistol = Colt.GetInfo();
+            string Pistol = сolt.GetInfo();
             Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", Pistol);
         }
 
