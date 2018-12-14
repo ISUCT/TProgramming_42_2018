@@ -1,28 +1,48 @@
-using System;
+Ôªøusing System;
+
 namespace Zadanie1
 {
     public class Program
     {
-       static void Main()
+        public static object Colt { get; set; }
+
+        public static double Formula(double x)
         {
-            Console.WriteLine("1 ‚‡Ë‡ÌÚ");
+            double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
+            Console.WriteLine($"–ø—Ä–∏ —Ö = {x} —Ñ—É–Ω–∫—Ü–∏—è y = {Math.Round(y, 2)}");
+            return y;
+        }
+
+        private static void Main()
+        {
+            Console.WriteLine("1 –≤–∞—Ä–∏–∞–Ω—Ç ");
             for (double x = 0.11; x <= 0.36; x = x + 0.05)
             {
                 Formula(x);
             }
+
             Console.WriteLine();
-            Console.WriteLine("2 ‚‡Ë‡ÌÚ");
+            Console.WriteLine("2 –≤–∞—Ä–∏–∞–Ω—Ç");
             double[] z = new double[5] { 0.2, 0.3, 0.38, 0.43, 0.57 };
             for (int i = 0; i <= 4; i++)
             {
                 Formula(z[i]);
             }
+
+            Console.WriteLine();
+
+            Pistol colt = new Pistol
+            {
+                Name = "Colt",
+                Kalibr = 0.45,
+                Mass = 1.4f,
+                Emkostmag = 7
+            };
+            string info = colt.GetInfo();
+            Console.WriteLine(info);
+            string pistol = colt.Display();
+            Console.WriteLine(pistol);
             Console.ReadKey();
         }
-        public static double Formula(double x)
-        {
-            double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
-            Console.WriteLine($"œË ı = {x} ÙÛÌÍˆËˇ y = {Math.Round(y, 2)}");
-            return y;        }
     }
 }

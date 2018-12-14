@@ -1,3 +1,3 @@
 # Course of c#
 
- Viktor Fedorov
+Please write your name and surname here
