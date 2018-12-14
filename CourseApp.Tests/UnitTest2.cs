@@ -9,11 +9,11 @@ namespace CourseApp.Tests
         [Fact]
         public void Test12()
         {
-            Pistol ñolt = new Pistol();
-            var name = ñolt.Name;
-            var kalibr = ñolt.Kalibr;
-            var emkostmag = ñolt.Emkostmag;
-            var mass = ñolt.Mass;
+            Pistol colt = new Pistol();
+            var name = colt.Name;
+            var kalibr = colt.Kalibr;
+            var emkostmag = colt.Emkostmag;
+            var mass = colt.Mass;
             Assert.Equal("Colt", name);
             Assert.Equal(0.45, kalibr);
             Assert.Equal(7, emkostmag);
