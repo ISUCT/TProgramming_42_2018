@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Pig
+    public class Pig : AnimalFarm
     {
         public Pig()
         {
@@ -72,11 +72,7 @@ namespace CourseApp
 
         public float Salo { get; set; }
 
-        public int Age { get; set; }
-
-        public string Pol { get; set; }
-
-        public void Info()
+        public override void Info()
         {
             Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}");
             Console.WriteLine(Graz());
@@ -87,7 +83,7 @@ namespace CourseApp
             return $"свинья возраста {Age} пошла поваляться в грязи  ";
         }
 
-        public string Ris()
+        public override string Ris()
         {
             return @"     _
          <`--'\>______
@@ -96,6 +92,16 @@ namespace CourseApp
          `-._,        /
             )-)_/--( >  
            ''''  ''''";
+        }
+
+        public override void Voice()
+        {
+            Console.WriteLine($"свинья пола {Pol} издала звук хрю хрю");
+        }
+
+        public override string ToString()
+        {
+            return "Свинья-Возраст: " + Age + "  Масса сало:" + Salo;
         }
     }
 }
