@@ -33,6 +33,10 @@ namespace CourseApp
 
                 Console.WriteLine($" X={i} y={Math.Round(prgrm(i, a, b), 3)}");
             }
+            Dog snech = new Dog();
+            snech.GetInfo();
+            Console.WriteLine(snech.Golos());
+            Console.WriteLine(snech.Picture());
             Console.ReadLine();
         }
 
