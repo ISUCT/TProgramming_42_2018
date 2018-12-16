@@ -5,10 +5,10 @@ namespace CourseApp
     public class Cow : AnimalFarm
     {
         public Cow()
+            : base()
         {
-            Pol = "M";
             Age = 15;
-            Meat = 70.0f;
+            Meat = Ves;
         }
 
         public Cow(float m)
@@ -55,17 +55,19 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return "Корова-Возраст: " + Age + "  Масса:" + Meat;
+            return "это Корова";
         }
 
-        public override void Voice()
+        public override string Voice()
         {
-            Console.WriteLine($"Корова пола {Pol} издала звук Мууу");
+            return $"Корова пола {Pol} издала звук Мууу";
         }
 
         public override void Info()
         {
             Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  масса мяса: {Meat}");
+            Console.WriteLine(Voice());
+            Console.WriteLine(Ris());
         }
 
         public override string Ris()

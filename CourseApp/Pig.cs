@@ -5,10 +5,10 @@ namespace CourseApp
     public class Pig : AnimalFarm
     {
         public Pig()
+            : base()
         {
-            Pol = "M";
             Age = 20;
-            Salo = 70.0f;
+            Salo = Ves;
         }
 
         public Pig(string n)
@@ -72,10 +72,17 @@ namespace CourseApp
 
         public float Salo { get; set; }
 
+        public override string ToString()
+        {
+            return "это Свинья";
+        }
+
         public override void Info()
         {
             Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}");
             Console.WriteLine(Graz());
+            Console.WriteLine(Voice());
+            Console.WriteLine(Ris());
         }
 
         public string Graz()
@@ -94,14 +101,9 @@ namespace CourseApp
            ''''  ''''";
         }
 
-        public override void Voice()
+        public override string Voice()
         {
-            Console.WriteLine($"свинья пола {Pol} издала звук хрю хрю");
-        }
-
-        public override string ToString()
-        {
-            return "Свинья-Возраст: " + Age + "  Масса сало:" + Salo;
+            return $"свинья пола {Pol} издала звук хрю хрю";
         }
     }
 }

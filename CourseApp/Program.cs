@@ -38,8 +38,8 @@ namespace CourseApp
             Pig svin = new Pig();
             Cow murka = new Cow();
             svin.Info();
-            svin.Voice();
-            Console.WriteLine(svin.Ris());
+            Console.WriteLine(svin);
+            murka.Info();
             Console.WriteLine(murka);
             Console.ReadLine();
         }
