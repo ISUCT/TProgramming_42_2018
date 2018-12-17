@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CourseApp
 {
 
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -32,7 +32,7 @@ namespace CourseApp
             }
             Console.ReadKey();
         }
-        static double Func(double x, double a, double b)
+        public static double Func(double x, double a, double b)
         {
             return ((a + b * x) * (a + b * x) * ((a + b * x) / 2)) / (1 + Math.Log10(a + b * x));
         }
