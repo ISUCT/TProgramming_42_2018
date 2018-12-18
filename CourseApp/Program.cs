@@ -37,10 +37,16 @@ namespace CourseApp
 
             Pig svin = new Pig();
             Cow murka = new Cow();
-            svin.Info();
             Console.WriteLine(svin);
-            murka.Info();
             Console.WriteLine(murka);
+            Animal[] animal = new Animal[2];
+            animal[0] = new Pig();
+            animal[1] = new Cow();
+            foreach (Animal i in animal)
+            {
+                i.Info();
+            }
+
             Console.ReadLine();
         }
     }

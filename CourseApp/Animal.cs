@@ -2,9 +2,9 @@
 
 namespace CourseApp
 {
-    public abstract class AnimalFarm
+    public abstract class Animal
     {
-        public AnimalFarm()
+        public Animal()
         {
             Pol = "M";
             Ves = 70.0f;

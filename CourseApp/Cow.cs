@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Cow : AnimalFarm
+    public class Cow : Animal
     {
         public Cow()
             : base()
@@ -55,7 +55,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return "это Корова";
+            return $"это Корова возраста{Age} и массой {Meat}";
         }
 
         public override string Voice()
