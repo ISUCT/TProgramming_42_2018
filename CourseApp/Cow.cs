@@ -55,7 +55,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return $"это Корова возраста{Age} и массой {Meat}";
+            return $"это Корова возраста {Age} и массой {Meat}";
         }
 
         public override string Voice()

@@ -8,7 +8,7 @@ namespace CourseApp.Tests
     {
         // тесты проверки программы Сow
         [Fact]
-        public void Test24()
+        public void Test25()
         {
             Cow murka = new Cow();
             Assert.Equal(15, murka.Age);
@@ -17,7 +17,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test25()
+        public void Test26()
         {
             Cow murka = new Cow("M");
             Assert.Equal(13, murka.Age );
@@ -25,7 +25,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test26()
+        public void Test27()
         {
             Cow murka = new Cow("F");
             Assert.Equal(15, murka.Age);
@@ -33,7 +33,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test27()
+        public void Test28()
         {
             Cow murka = new Cow(80.0f);
             Assert.Equal(13, murka.Age);
@@ -41,11 +41,18 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test28()
+        public void Test29()
         {
             Cow murka = new Cow(12);
             Assert.Equal(75.0f, murka.Meat);
             Assert.Equal("F", murka.Pol);
+        }
+
+        [Fact]
+        public void Test30()
+        {
+            Cow murka = new Cow();
+            Assert.Equal("это Корова возраста 15 и массой 70", murka.ToString() );
         }
     }
 }

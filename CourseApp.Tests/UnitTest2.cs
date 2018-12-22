@@ -101,5 +101,12 @@ namespace CourseApp.Tests
             var resGraz = svin.Graz();
             Assert.Equal($"свинья возраста {20} пошла поваляться в грязи  ", resGraz);
         }
+
+        [Fact]
+        public void Test24()
+        {
+            Pig svin = new Pig();
+            Assert.Equal("это Свинья возраста 20  и массой 70", svin.ToString());
+        }
     }
 }
