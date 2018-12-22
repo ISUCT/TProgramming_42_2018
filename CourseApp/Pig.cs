@@ -11,9 +11,9 @@ namespace CourseApp
             Salo = Ves;
         }
 
-        public Pig(string n)
+        public Pig(string pol)
         {
-            Pol = n;
+            Pol = pol;
             if (Pol == "F")
             {
                 Age = 15;
@@ -26,9 +26,9 @@ namespace CourseApp
             }
         }
 
-        public Pig(float s)
+        public Pig(float salo)
         {
-            Salo = s;
+            Salo = salo;
             if (Salo <= 70.0f && Salo > 45.0f)
             {
                 Pol = "M";
@@ -48,9 +48,9 @@ namespace CourseApp
             }
         }
 
-        public Pig(int a)
+        public Pig(int age)
         {
-            Age = a;
+            Age = age;
             if (Age > 15 && Age <= 20)
             {
                 Pol = "M";

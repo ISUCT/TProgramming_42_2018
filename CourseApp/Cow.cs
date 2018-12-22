@@ -24,9 +24,9 @@ namespace CourseApp
             }
         }
 
-        public Cow(int a)
+        public Cow(int age)
         {
-            Age = a;
+            Age = age;
             Pol = "F";
             Meat = 75.0f;
             if (Age < 1 || Age > 15)
@@ -36,9 +36,9 @@ namespace CourseApp
             }
         }
 
-        public Cow(string n)
+        public Cow(string pol)
         {
-            Pol = n;
+            Pol = pol;
             if (Pol == "F")
             {
                 Age = 15;
