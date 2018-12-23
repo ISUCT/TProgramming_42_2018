@@ -33,6 +33,8 @@ namespace CourseApp
 
             Television tv = new Television(3000, 2, 5);
             string tV = tv.GetInfo();
+            string status = tv.Status();
+            Console.WriteLine(status);
             Console.WriteLine(tV);
             Console.ReadKey();
         }
