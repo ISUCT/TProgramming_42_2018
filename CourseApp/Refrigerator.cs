@@ -18,6 +18,16 @@ namespace CourseApp
             : base()
         {
             Temperature = temp;
+            if (temp >= 5)
+            {
+                Model = 1;
+                Age = 7;
+            }
+            else
+            {
+                Model = 2;
+                Age = 2;
+            }
         }
 
         public Refrigerator(int temp, int md, int ag)
@@ -55,12 +65,16 @@ namespace CourseApp
             return "\nХолодильник включён";
         }
 
+        public override string ToString()
+        {
+            return $"Температура в холодильнике: +{Temperature}, Модель холодильника {Model}, Возраст холодильника: {Age}. ";
+        }
+
         public override string Art()
         {
             if (Model == 1)
             {
                 return $@"
-Температура в холодильнике: {Temperature}, Модель холодильника {Model}, Возраст холодильника: {Age}. 
        ___________,_____
       |     |  #  |=====|
       |     | (_) |=====|
@@ -77,8 +91,7 @@ namespace CourseApp
             }
             else
             {
-                return $@"
-Температура в холодильнике: {Temperature}, Модель холодильника {Model}, Возраст холодильника: {Age}. 
+                return $@" 
 
       (∩∩│││┤┤╠╠╠║║║╢▒╢╢╢▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
       ((∩∩││┤Ñ╠╠╠╠║║╢▒╢╢╢▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -119,6 +132,7 @@ namespace CourseApp
         public override void GetInfo()
         {
             Console.WriteLine(Status());
+            Console.WriteLine(ToString());
             Console.WriteLine(Art());
         }
     }
