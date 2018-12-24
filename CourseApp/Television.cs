@@ -35,7 +35,7 @@ namespace CourseApp
             }
         }
 
-        public Television(int ch, int md, byte ag)
+        public Television(int ch, int md, int ag)
             : base(md, ag)
         {
             Channel = ch;

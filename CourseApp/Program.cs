@@ -32,10 +32,16 @@ namespace CourseApp
             }
 
             Television tv = new Television(3000, 2, 5);
-            string tV = tv.GetInfo();
-            string status = tv.Status();
-            Console.WriteLine(status);
-            Console.WriteLine(tV);
+            string tvInfo = tv.GetInfo();
+            string tvStatus = tv.Status();
+            Console.WriteLine(tvStatus);
+            Console.WriteLine(tvInfo);
+
+            Refrigerator rg = new Refrigerator(1, 2, 4);
+            string rgInfo = rg.GetInfo();
+            string rgStatus = rg.Status();
+            Console.WriteLine(rgStatus);
+            Console.WriteLine(rgInfo);
             Console.ReadKey();
         }
     }
