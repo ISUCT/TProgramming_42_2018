@@ -67,6 +67,8 @@ namespace CourseApp
 
         public abstract string Status();
 
-        public abstract string GetInfo();
+        public abstract string Art();
+
+        public abstract void GetInfo();
     }
 }

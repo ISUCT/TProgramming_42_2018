@@ -55,7 +55,7 @@ namespace CourseApp
             return "\nХолодильник включён";
         }
 
-        public override string GetInfo()
+        public override string Art()
         {
             if (Model == 1)
             {
@@ -114,6 +114,12 @@ namespace CourseApp
       ▒███████████████████████████████████
        └                                └";
             }
+        }
+
+        public override void GetInfo()
+        {
+            Console.WriteLine(Status());
+            Console.WriteLine(Art());
         }
     }
 }

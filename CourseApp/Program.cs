@@ -31,17 +31,14 @@ namespace CourseApp
                 Console.WriteLine($"При x = {z[i]} y = {Formula(z[i], a, b)}");
             }
 
-            Television tv = new Television(3000, 2, 5);
-            string tvInfo = tv.GetInfo();
-            string tvStatus = tv.Status();
-            Console.WriteLine(tvStatus);
-            Console.WriteLine(tvInfo);
+            Appliances[] appliances = new Appliances[2];
+            appliances[0] = new Television();
+            appliances[1] = new Refrigerator();
+            foreach(Appliances i in appliances)
+            {
+               i.GetInfo();
+            }
 
-            Refrigerator rg = new Refrigerator(1, 2, 4);
-            string rgInfo = rg.GetInfo();
-            string rgStatus = rg.Status();
-            Console.WriteLine(rgStatus);
-            Console.WriteLine(rgInfo);
             Console.ReadKey();
         }
     }
