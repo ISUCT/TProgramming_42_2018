@@ -53,9 +53,9 @@ namespace Zadanie1
 
             set
             {
-                if (value > 1)
+                if (value >= 7.62)
                 {
-                    Console.WriteLine("Ствол не расчитан на этот калибр");
+                    kalibr = 7.62;
                 }
                 else if (value < 0)
                 {
@@ -101,9 +101,9 @@ namespace Zadanie1
 
             set
             {
-                if (value > 20)
+                if (value > 50)
                 {
-                    Console.WriteLine("таких магазинов не существует");
+                    emkostmag = 50;
                 }
                 else if (value < 0)
                 {
@@ -116,7 +116,7 @@ namespace Zadanie1
             }
         }
 
-        public abstract string GetInfo();
+        public abstract void GetInfo();
 
         public abstract string Display();
     }

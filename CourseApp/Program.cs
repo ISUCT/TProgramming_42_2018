@@ -31,17 +31,14 @@ namespace Zadanie1
 
             Console.WriteLine();
 
-            Pistol colt = new Pistol
+            Arsenal[] arsenals = new Arsenal[2];
+            arsenals[0] = new Pistol();
+            arsenals[1] = new Rifles();
+            foreach (Arsenal i in arsenals)
             {
-                Name = "Colt",
-                Kalibr = 0.45,
-                Mass = 1.4f,
-                Emkostmag = 7
-            };
-            string info = colt.GetInfo();
-            Console.WriteLine(info);
-            string pistol = colt.Display();
-            Console.WriteLine(pistol);
+                i.GetInfo();
+            }
+
             Console.ReadKey();
         }
     }

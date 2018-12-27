@@ -18,9 +18,15 @@ namespace Zadanie1
             Emkostmag = 7;
         }
 
-        public override string GetInfo()
+        public override string ToString()
         {
             return $"Наименование: {Name}  Калибр: {Kalibr} Масса: {Mass} Емкость магазина: {Emkostmag}\n Пистолет {Name} выстрелил: \"Бах!\"";
+        }
+
+        public override void GetInfo()
+        {
+            Console.WriteLine(ToString());
+            Console.WriteLine(Display());
         }
 
         public override string Display()
