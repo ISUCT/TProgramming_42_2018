@@ -2,18 +2,18 @@
 
 namespace Zadanie1
 {
-    public abstract class Arsenal
+    public abstract class Gun
     {
         private string name;
         private double kalibr;
         private float mass;
         private byte emkostmag;
 
-        public Arsenal()
+        public Gun()
         {
         }
 
-        protected Arsenal(string name, double kalibr, float mass)
+        protected Gun(string name, double kalibr, float mass)
         {
             this.name = name;
             this.kalibr = kalibr;

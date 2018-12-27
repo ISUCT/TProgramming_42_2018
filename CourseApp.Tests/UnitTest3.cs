@@ -9,7 +9,7 @@ namespace CourseApp.Tests
         [Fact]
         public void Test15()
         {
-            Arsenal[] arsenals = new Arsenal[2];
+            Gun[] arsenals = new Gun[2];
             arsenals[0] = new Pistol();
             arsenals[1] = new Rifles();
             Assert.Equal("Colt", arsenals[0].Name);
@@ -20,7 +20,7 @@ namespace CourseApp.Tests
         [Fact]
         public void Test16()
         {
-            Arsenal[] arsenals = new Arsenal[2];
+            Gun[] arsenals = new Gun[2];
             arsenals[0] = new Pistol("name",2,3);
             arsenals[1] = new Rifles("name",2,3);
             Assert.Equal(7, arsenals[0].Emkostmag);

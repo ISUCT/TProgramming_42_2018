@@ -2,7 +2,7 @@ using System;
 
 namespace Zadanie1
 {
-    public class Rifles : Arsenal
+    public class Rifles : Gun
     {
         public Rifles()
         {

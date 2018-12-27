@@ -31,10 +31,10 @@ namespace Zadanie1
 
             Console.WriteLine();
 
-            Arsenal[] arsenals = new Arsenal[2];
+            Gun[] arsenals = new Gun[2];
             arsenals[0] = new Pistol();
             arsenals[1] = new Rifles();
-            foreach (Arsenal i in arsenals)
+            foreach (Gun i in arsenals)
             {
                 i.GetInfo();
             }
