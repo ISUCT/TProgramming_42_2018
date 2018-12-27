@@ -12,9 +12,9 @@ namespace CourseApp
 
         public float Ves { get; set; }
 
-        public int Age { get; set; }
-
         public string Pol { get; set; }
+
+        public abstract int Age { get; set; }
 
         public abstract string Voice();
 

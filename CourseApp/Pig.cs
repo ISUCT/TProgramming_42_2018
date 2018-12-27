@@ -4,6 +4,8 @@ namespace CourseApp
 {
     public class Pig : Animal
     {
+        private int age;
+
         public Pig()
             : base()
         {
@@ -62,15 +64,30 @@ namespace CourseApp
                 Pol = "F";
                 Salo = 45.0f;
             }
-
-            if (Age < 1 || Age > 20)
-            {
-                Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]");
-                throw new Exception();
-            }
         }
 
         public float Salo { get; set; }
+
+        public override int Age
+        {
+            get
+            {
+                return age;
+            }
+
+            set
+            {
+                if (value < 1 || value > 20)
+                {
+                    Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]");
+                    throw new Exception();
+                }
+                else
+                {
+                    age = value;
+                }
+            }
+        }
 
         public override string ToString()
         {

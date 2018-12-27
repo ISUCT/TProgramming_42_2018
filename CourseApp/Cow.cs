@@ -4,6 +4,8 @@ namespace CourseApp
 {
     public class Cow : Animal
     {
+        private int age;
+
         public Cow()
             : base()
         {
@@ -52,6 +54,27 @@ namespace CourseApp
         }
 
         public float Meat { get; set; }
+
+        public override int Age
+        {
+            get
+            {
+                return age;
+            }
+
+            set
+            {
+                if (value < 1 || value > 20)
+                {
+                    Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]");
+                    throw new Exception();
+                }
+                else
+                {
+                    age = value;
+                }
+            }
+        }
 
         public override string ToString()
         {
