@@ -32,11 +32,11 @@ namespace CourseApp
             }
 
             Appliances[] appliances = new Appliances[2];
-            appliances[0] = new Television();
-            appliances[1] = new Refrigerator();
-            foreach(Appliances i in appliances)
+            appliances[0] = new Television(1, 2, 3, false);
+            appliances[1] = new Refrigerator(1, 1, 3, false);
+            foreach (Appliances i in appliances)
             {
-               i.GetInfo();
+                i.GetInfo();
             }
 
             Console.ReadKey();

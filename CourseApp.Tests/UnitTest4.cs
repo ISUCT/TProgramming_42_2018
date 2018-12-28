@@ -7,7 +7,7 @@ namespace CourseApp.Tests
     public class UnitTest4
     {
         [Fact]
-        public void Test22()
+        public void ArrayTesting1()
         {
             Appliances[] appliances = new Appliances[2];
             appliances[0] = new Television();
@@ -20,7 +20,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test23()
+        public void ArrayTesting2()
         {
             Appliances[] appliances = new Appliances[2];
             appliances[0] = new Television(132);
@@ -28,7 +28,7 @@ namespace CourseApp.Tests
             Assert.Equal(1, appliances[0].Model);
             Assert.Equal(3, appliances[0].Age);
             Assert.Equal(2, appliances[1].Model);
-            Assert.Equal(2, appliances[1].Age);
+            Assert.Equal(5, appliances[1].Age);
         }
     }
 }

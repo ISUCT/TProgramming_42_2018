@@ -13,12 +13,14 @@ namespace CourseApp
         {
             Model = 1;
             Age = 5;
+            Status = true;
         }
 
-        public Appliances(int md, int ag)
+        public Appliances(int md, int ag, bool st)
         {
             Model = md;
             Age = ag;
+            Status = st;
         }
 
         public int Model
@@ -65,7 +67,7 @@ namespace CourseApp
             }
         }
 
-        public abstract string Status();
+        public abstract bool Status { get; set; }
 
         public abstract string Art();
 

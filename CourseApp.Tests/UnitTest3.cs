@@ -7,7 +7,7 @@ namespace CourseApp.Tests
     public class UnitTest3
     {
         [Fact]
-        public void Test19()
+        public void TestingTheFirstConstructorOfTheRefrigerator()
         {
             Refrigerator rg = new Refrigerator();
             Assert.Equal(3, rg.Temperature);
@@ -16,28 +16,27 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test20()
+        public void TestingTheSecondConstructorOfTheRefrigerator()
         {
             Refrigerator rg = new Refrigerator(7);
             Assert.Equal(7, rg.Temperature);
             Assert.Equal(1, rg.Model);
-            Assert.Equal(7, rg.Age);
+            Assert.Equal(5, rg.Age);
         }
 
         [Fact]
-        public void Test21()
+        public void TestingTheThirdConstructorOfTheRefrigerator()
         {
-            Refrigerator rg = new Refrigerator(2, 1, 8);
+            Refrigerator rg = new Refrigerator(2, 1, 8, true);
             Assert.Equal(2, rg.Temperature);
             Assert.Equal(1, rg.Model);
             Assert.Equal(8, rg.Age);
         }
 
         [Fact]
-        public void Test22()
+        public void TestingString()
         {
-            Refrigerator rg = new Refrigerator(6, 1, 4);
-            Assert.Equal("\nХолодильник включён", rg.Status());
+            Refrigerator rg = new Refrigerator(6, 1, 4, true);
             Assert.Equal($"Температура в холодильнике: +{rg.Temperature}, Модель холодильника {rg.Model}, Возраст холодильника: {rg.Age}. ", rg.ToString());
         }
     }

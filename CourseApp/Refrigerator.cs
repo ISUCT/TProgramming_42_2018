@@ -7,6 +7,8 @@ namespace CourseApp
     public class Refrigerator : Appliances
     {
         private double temperature;
+        private bool status;
+        private string statusInfo;
 
         public Refrigerator()
             : base()
@@ -21,17 +23,15 @@ namespace CourseApp
             if (temp >= 5)
             {
                 Model = 1;
-                Age = 7;
             }
             else
             {
                 Model = 2;
-                Age = 2;
             }
         }
 
-        public Refrigerator(int temp, int md, int ag)
-            : base(md, ag)
+        public Refrigerator(int temp, int md, int ag, bool st)
+            : base(md, ag, st)
         {
             Temperature = temp;
         }
@@ -60,9 +60,26 @@ namespace CourseApp
             }
         }
 
-        public override string Status()
+        public override bool Status
         {
-            return "\nХолодильник включён";
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                if (value == true)
+                {
+                    status = value;
+                    statusInfo = "\nХолодильник включен";
+                }
+                else
+                {
+                    status = value;
+                    statusInfo = "\nХолодильник выключен";
+                }
+            }
         }
 
         public override string ToString()
@@ -131,7 +148,7 @@ namespace CourseApp
 
         public override void GetInfo()
         {
-            Console.WriteLine(Status());
+            Console.WriteLine(statusInfo);
             Console.WriteLine(ToString());
             Console.WriteLine(Art());
         }

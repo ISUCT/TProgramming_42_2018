@@ -5,6 +5,8 @@ namespace CourseApp
     public class Television : Appliances
     {
         private int channel;
+        private bool status;
+        private string statusInfo;
 
         public Television()
             : base()
@@ -16,12 +18,6 @@ namespace CourseApp
             : base()
         {
             Channel = ch;
-            if (ch < 0)
-            {
-                Console.WriteLine("Канал должен быть >= 0");
-            }
-            else
-            {
                 if (ch >= 100)
                 {
                     Model = 1;
@@ -32,11 +28,10 @@ namespace CourseApp
                     Model = 2;
                     Age = 7;
                 }
-            }
         }
 
-        public Television(int ch, int md, int ag)
-            : base(md, ag)
+        public Television(int ch, int md, int ag, bool st)
+            : base(md, ag, st)
         {
             Channel = ch;
         }
@@ -65,9 +60,26 @@ namespace CourseApp
             }
         }
 
-        public override string Status()
+        public override bool Status
         {
-            return "\nТелевизор включен";
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                if (value == true)
+                {
+                    status = value;
+                    statusInfo = "\nТелевизор включен\n";
+                }
+                else
+                {
+                    status = value;
+                    statusInfo = "\nТелевизор выключен\n";
+                }
+            }
         }
 
         public override string ToString()
@@ -95,7 +107,7 @@ namespace CourseApp
 
         public override void GetInfo()
         {
-            Console.WriteLine(Status());
+            Console.Write(statusInfo);
             Console.WriteLine(ToString());
             Console.WriteLine(Art());
         }
