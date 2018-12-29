@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="StyleCopeRules" Description="StyleCopeRules custom ruleset" ToolsVersion="14.0">
+  <IncludeAll Action="None" />
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1101" Action="None" />
+    <Rule Id="SA0001" Action="None" />
+    <Rule Id="SA1210" Action="None" />
+    <Rule Id="SA1633" Action="None" />
+    <Rule Id="SA1600" Action="None" />
+    <Rule Id="AD0001" Action="None" />
+    <Rule Id="CA2234" Action="None" />
+    <Rule Id="SA1200" Action="None" />
+    <Rule Id="SA1000" Action="None" />
+    <Rule Id="SA1012" Action="None" />
+    <Rule Id="SA1012" Action="None" />
+    <Rule Id="SA1009" Action="None" />
+    <Rule Id="SA1012" Action="None" />
+    <Rule Id="SA1652" Action="None" />
+    <Rule Id="CA1305" Action="None" />
+    <Rule Id="CA1056" Action="None" />
+  </Rules>
+</RuleSet>
