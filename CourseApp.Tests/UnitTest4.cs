@@ -10,10 +10,10 @@ namespace CourseApp.Tests
         public void Test17()
         {
             Rifles m16 = new Rifles();
-            var name = M16.Name;
-            var kalibr = M16.Kalibr;
-            var emkostmag = M16.Emkostmag;
-            var mass = M16.Mass;
+            var name = m16.Name;
+            var kalibr = m16.Kalibr;
+            var emkostmag = m16.Emkostmag;
+            var mass = m16.Mass;
             Assert.Equal("M16", name);
             Assert.Equal(5.56, kalibr);
             Assert.Equal(30, emkostmag);
@@ -43,11 +43,11 @@ HH======#H###############H######################
         {
             Rifles m16 = new Rifles();
             var name = m16.Name;
-            var kalibr = M16.Kalibr;
-            var mass = M16.Mass;
-            var emkostmag = M16.Emkostmag;
+            var kalibr = m16.Kalibr;
+            var mass = m16.Mass;
+            var emkostmag = m16.Emkostmag;
             Assert.Equal("M16", name);
-            string rifles = M16.ToString();
+            string rifles = m16.ToString();
             Assert.Equal($"������������: M16  ������: 5,56 �����: 2,4 ������� ��������: 30\n �������� M16 ����������: \"���!\"", rifles);
         }
 
