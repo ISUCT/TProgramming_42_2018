@@ -6,9 +6,9 @@ namespace CourseApp.Tests
 {
     public class UnitTest1
     {
-        private float xn = 1.23f; // х начальное
-        private float xk = 7.23f; // х конечное
-        private float dx = 1.2f; // шаг
+        private readonly float xn = 1.23f; // х начальное
+        private readonly float xk = 7.23f; // х конечное
+        private readonly float dx = 1.2f; // шаг
         private double[] xm = new double[5] { 1.88, 2.26, 3.84, 4.55, 6.21 };
 
         // тесты для проверки функции

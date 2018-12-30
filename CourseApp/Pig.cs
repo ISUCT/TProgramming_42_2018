@@ -2,18 +2,20 @@
 
 namespace CourseApp
 {
-    public class Pig
+    public class Pig : Animal
     {
+        private int age;
+
         public Pig()
+            : base()
         {
-            Pol = "M";
             Age = 20;
-            Salo = 70.0f;
+            Salo = Ves;
         }
 
-        public Pig(string n)
+        public Pig(string pol)
         {
-            Pol = n;
+            Pol = pol;
             if (Pol == "F")
             {
                 Age = 15;
@@ -26,9 +28,9 @@ namespace CourseApp
             }
         }
 
-        public Pig(float s)
+        public Pig(float salo)
         {
-            Salo = s;
+            Salo = salo;
             if (Salo <= 70.0f && Salo > 45.0f)
             {
                 Pol = "M";
@@ -48,9 +50,9 @@ namespace CourseApp
             }
         }
 
-        public Pig(int a)
+        public Pig(int age)
         {
-            Age = a;
+            Age = age;
             if (Age > 15 && Age <= 20)
             {
                 Pol = "M";
@@ -62,24 +64,42 @@ namespace CourseApp
                 Pol = "F";
                 Salo = 45.0f;
             }
-
-            if (Age < 1 || Age > 20)
-            {
-                Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]");
-                throw new Exception();
-            }
         }
 
         public float Salo { get; set; }
 
-        public int Age { get; set; }
+        public override int Age
+        {
+            get
+            {
+                return age;
+            }
 
-        public string Pol { get; set; }
+            set
+            {
+                if (value < 1 || value > 20)
+                {
+                    Console.WriteLine("ОШИБКА!Возраст должен попадать в диапазон[1;20]");
+                    throw new Exception();
+                }
+                else
+                {
+                    age = value;
+                }
+            }
+        }
 
-        public void Info()
+        public override string ToString()
+        {
+            return $"это Свинья возраста {Age}  и массой {Salo}";
+        }
+
+        public override void Info()
         {
             Console.WriteLine($"Пол: {Pol}  Возраст: {Age}  Масса сало: {Salo}");
             Console.WriteLine(Graz());
+            Console.WriteLine(Voice());
+            Console.WriteLine(Ris());
         }
 
         public string Graz()
@@ -87,7 +107,7 @@ namespace CourseApp
             return $"свинья возраста {Age} пошла поваляться в грязи  ";
         }
 
-        public string Ris()
+        public override string Ris()
         {
             return @"     _
          <`--'\>______
@@ -96,6 +116,11 @@ namespace CourseApp
          `-._,        /
             )-)_/--( >  
            ''''  ''''";
+        }
+
+        public override string Voice()
+        {
+            return $"свинья пола {Pol} издала звук хрю хрю";
         }
     }
 }
