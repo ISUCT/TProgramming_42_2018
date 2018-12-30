@@ -31,9 +31,14 @@ namespace CourseApp
                 Console.WriteLine($"При x = {z[i]} y = {Formula(z[i], a, b)}");
             }
 
-            Television tv = new Television(3000, 2, 5);
-            string tV = tv.GetInfo();
-            Console.WriteLine(tV);
+            Appliances[] appliances = new Appliances[2];
+            appliances[0] = new Television(1, 2, 3, false);
+            appliances[1] = new Refrigerator(1, 1, 3, false);
+            foreach (Appliances i in appliances)
+            {
+                i.GetInfo();
+            }
+
             Console.ReadKey();
         }
     }
