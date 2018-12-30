@@ -9,7 +9,7 @@ namespace CourseApp.Tests
         [Fact]
         public void Test17()
         {
-            Rifles M16 = new Rifles();
+            Rifles m16 = new Rifles();
             var name = M16.Name;
             var kalibr = M16.Kalibr;
             var emkostmag = M16.Emkostmag;
@@ -41,14 +41,14 @@ HH======#H###############H######################
         [Fact]
         public void Test19()
         {
-            Rifles M16 = new Rifles();
-            var name = M16.Name;
+            Rifles m16 = new Rifles();
+            var name = m16.Name;
             var kalibr = M16.Kalibr;
             var mass = M16.Mass;
             var emkostmag = M16.Emkostmag;
             Assert.Equal("M16", name);
             string rifles = M16.ToString();
-            Assert.Equal($"Наименование: M16  калибр: 5,56 масса: 2,4 емкость магазина: 30\n Винтовка M16 Выстрелила: \"Бах!\"", rifles);
+            Assert.Equal($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: M16  пїЅпїЅпїЅпїЅпїЅпїЅ: 5,56 пїЅпїЅпїЅпїЅпїЅ: 2,4 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: 30\n пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ M16 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: \"пїЅпїЅпїЅ!\"", rifles);
         }
 
     }
