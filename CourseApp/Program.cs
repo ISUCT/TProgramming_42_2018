@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CourseApp;
 
 namespace CourseApp
 {
-public class Program
+    public class Program
     {
         public static double Func(double x, double a, double b)
         {
@@ -31,7 +28,9 @@ public class Program
                 Console.WriteLine($"y({x})={Func(x, a, b)}");
             }
 
-            Console.ReadKey();
+            Ship admiral = new Ship(40);
+            admiral.Info();
+            Console.ReadLine();
         }
     }
 }
