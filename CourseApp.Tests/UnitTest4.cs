@@ -9,7 +9,11 @@ namespace CourseApp.Tests
         [Fact]
         public void Test17()
         {
+<<<<<<< HEAD
             Rifles m16 = new Rifles();
+=======
+            Rifles м16 = new Rifles();
+>>>>>>> master
             var name = M16.Name;
             var kalibr = M16.Kalibr;
             var emkostmag = M16.Emkostmag;
@@ -41,8 +45,13 @@ HH======#H###############H######################
         [Fact]
         public void Test19()
         {
+<<<<<<< HEAD
             Rifles m16 = new Rifles();
             var name = m16.Name;
+=======
+            Rifles м16 = new Rifles();
+            var name = M16.Name;
+>>>>>>> master
             var kalibr = M16.Kalibr;
             var mass = M16.Mass;
             var emkostmag = M16.Emkostmag;
