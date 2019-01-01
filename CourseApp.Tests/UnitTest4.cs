@@ -43,5 +43,13 @@ namespace CourseApp.Tests
             Assert.Equal("Из-за странного корма все лисы мутировали, покорили мир и сделали людей своими рабами", animal[0].Mut());
             Assert.Equal("Волки покорились мутировавшим лисицам", animal[1].Mut());
         }
+        [Fact]
+        public void Test16()
+        {
+            Animals[] animal = new Animals[2];
+            animal[0] = new Fox();
+            animal[1] = new Wolf();
+            Assert.Equal("Волк Неизвестное пошёл всех кусать, но его укусила лисица", animal[1].ToString());
+        }
     }
 }
