@@ -99,11 +99,11 @@ namespace CourseApp
         public void Info()
         {
             Console.WriteLine($" пассажиров: {passangers} длина: {dlina} водоизмещение: {vodoizmeschenie}");
-            Console.WriteLine(ToString());
+            Console.WriteLine(Predlojenie());
             Console.WriteLine(Ris());
         }
 
-        public override string ToString()
+        public string Predlojenie()
         {
             return $"Корабль с длиной {dlina} метров вышел в открытое море";
         }

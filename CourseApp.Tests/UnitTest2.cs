@@ -82,9 +82,9 @@ ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
         public void Test12()
         {
             Ship admiral = new Ship();
-            var resToString = admiral.ToString();
+            var resPredlojenie = admiral.Predlojenie();
             var dlina = admiral.Dlina;
-            Assert.Equal($"Корабль с длиной {dlina} метров вышел в открытое море", resToString);
+            Assert.Equal($"Корабль с длиной {dlina} метров вышел в открытое море", resPredlojenie);
         }
     }
 }
