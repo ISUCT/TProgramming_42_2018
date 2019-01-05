@@ -4,6 +4,7 @@ namespace CourseApp
 {
     public class Program
     {
+
         public static double Prgrm(double x, float a, float b)
         {
             return (1 + Math.Pow(Math.Log(x / a), 2)) / (b - Math.Pow(Math.E, x / a));
@@ -27,10 +28,12 @@ namespace CourseApp
             Console.WriteLine();
 
             // задание b
+
             Console.WriteLine(" b)");
             double[] xb = new double[5] { 2.2, 3.78, 4.51, 6.58, 1.2 };
             foreach (double i in xb)
             {
+
                 Console.WriteLine($" X={i} y={Math.Round(Prgrm(i, a, b), 3)}");
             }
 
@@ -48,7 +51,11 @@ namespace CourseApp
                 Console.WriteLine(i.Picture());
             }
 
+
             Console.ReadLine();
         }
+
+
+
     }
 }
