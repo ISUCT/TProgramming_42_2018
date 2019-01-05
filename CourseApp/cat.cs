@@ -2,26 +2,26 @@
 
 namespace CourseApp
 {
-    public class Dog : Pet
+    public class Cat : Pet
     {
-        public Dog()
+        public Cat()
             : base()
         {
-            Weight = 50.0f;
+            Weight = 15.0f;
         }
 
-        public Dog(string n)
+        public Cat(string n)
         {
             Pol = n;
-            if (Pol == "S")
+            if (Pol == "K")
             {
-                Age = 12;
-                Weight = 45.0f;
+                Age = 9;
+                Weight = 10.0f;
             }
             else
             {
-                Age = 14;
-                Weight = 50.0f;
+                Age = 11;
+                Weight = 12.0f;
             }
         }
 
@@ -36,20 +36,24 @@ namespace CourseApp
 
         public override string Golos()
         {
-            return $"собака возраста {Age} подала голос гав-гав ";
+            return $"кот возраста {Age} подал голос мяу ";
         }
 
         public override string Picture()
         {
-            return @" __ _ 
-o'')}____// 
-`_/ ) 
-(_(_/-(_/";
+            return @" 
+    /\___/\
+   (  o o  )
+   /   *   \
+   \__\_/__/ meow!
+     /   \
+    / ___ \
+    \/___\/";
         }
 
         public override string ToString()
         {
-            return $"собака возраста {Age} и полом {Pol}";
+            return $"кот возраста {Age} и полом {Pol}";
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CourseApp.Tests
         public void Test6()
         {
            Dog snech = new Dog();
-            
+
             Assert.Equal(15, snech.Age);
             Assert.Equal(50.0f, snech.Weight);
             Assert.Equal("K", snech.Pol);
@@ -48,6 +48,13 @@ o'')}____//
         {
             Dog snech = new Dog();
             Assert.Equal($"собака возраста {15} подала голос гав-гав ", snech.Golos());
+        }
+
+        [Fact]
+        public void Test11()
+        {
+            Dog snech = new Dog();
+            Assert.Equal("собака возраста 15 и полом K", snech.ToString());
         }
     }
 }
