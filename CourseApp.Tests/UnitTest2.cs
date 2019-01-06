@@ -57,29 +57,17 @@ ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
         [Fact]
         public void Test10()
         {
-            Ship admiral = new Ship(40);
-            var passangers = admiral.Passangers;
-            var dlina = admiral.Dlina;
-            var vodoizmeschenie = admiral.Vodoizmeschenie;
-            Assert.Equal(25, passangers);
-            Assert.Equal(40, dlina);
-            Assert.Equal(100, vodoizmeschenie);
-        }
-
-        [Fact]
-        public void Test11()
-        {
             Ship admiral = new Ship();
             var passangers = admiral.Passangers;
             var dlina = admiral.Dlina;
             var vodoizmeschenie = admiral.Vodoizmeschenie;
             Assert.Equal(20, passangers);
-            Assert.Equal(50, dlina);
+            Assert.Equal(55, dlina);
             Assert.Equal(100, vodoizmeschenie);
         }
 
         [Fact]
-        public void Test12()
+        public void Test11()
         {
             Ship admiral = new Ship();
             var resPredlojenie = admiral.Predlojenie();

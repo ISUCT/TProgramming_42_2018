@@ -8,47 +8,43 @@ namespace CourseApp
 {
     public class Ship : Transport
     {
-        private int passangers;
-        private int dlina;
-        private int vodoizmeschenie;
-
         public Ship()
             : base()
         {
-            passangers = 20;
-            dlina = 55;
-            vodoizmeschenie = 100;
+            Passangers = 20;
+            Dlina = 55;
+            Vodoizmeschenie = 100;
         }
 
         public Ship(int b)
         {
-            passangers = 25;
-            dlina = b;
-            vodoizmeschenie = 100;
+            Passangers = 25;
+            Dlina = b;
+            Vodoizmeschenie = 100;
         }
 
         public Ship(int a, int b, int c)
         {
-            passangers = a;
-            dlina = b;
-            vodoizmeschenie = c;
+            Passangers = a;
+            Dlina = b;
+            Vodoizmeschenie = c;
         }
 
         public override void Info()
         {
-            Console.WriteLine($"Корабль: пассажиров:{passangers} длина:{dlina} водоизмещение:{vodoizmeschenie}");
+            Console.WriteLine($"Корабль: пассажиров:{Passangers} длина:{Dlina} водоизмещение:{Vodoizmeschenie}");
             Console.WriteLine(Predlojenie());
             Console.WriteLine(Ris());
         }
 
         public override string ToString()
         {
-            return $"Корабль с водоизмещением {vodoizmeschenie}  громко гудит";
+            return $"Корабль с длиной {Dlina}  громко гудит";
         }
 
         public override string Predlojenie()
         {
-            return $"Корабль с длиной {dlina} метров вышел в открытое море";
+            return $"Корабль с длиной {Dlina} метров вышел в открытое море";
         }
 
         public string Ris()
