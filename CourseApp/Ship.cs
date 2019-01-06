@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace CourseApp
 {
-    public class Ship
+    public class Ship : Transport
     {
         private int passangers;
         private int dlina;
         private int vodoizmeschenie;
 
         public Ship()
+            : base()
         {
             passangers = 20;
-            dlina = 50;
+            dlina = 55;
             vodoizmeschenie = 100;
         }
 
@@ -33,77 +34,19 @@ namespace CourseApp
             vodoizmeschenie = c;
         }
 
-        public int Passangers
+        public override void Info()
         {
-            get
-            {
-                return passangers;
-            }
-
-            set
-            {
-                if (value > 250 || value < 0)
-                {
-                    Console.WriteLine("Невозможное количество пассажиров(min:0 max:250)");
-                    throw new Exception();
-                }
-                else
-                {
-                    passangers = value;
-                }
-            }
-        }
-
-        public int Dlina
-        {
-            get
-            {
-                return dlina;
-            }
-
-            set
-            {
-                if (value > 1000 || value < 5)
-                {
-                    Console.WriteLine("Невозможная длина корабля(min:5 max:1000)");
-                    throw new Exception();
-                }
-                else
-                {
-                    dlina = value;
-                }
-            }
-        }
-
-        public int Vodoizmeschenie
-        {
-            get
-            {
-                return vodoizmeschenie;
-            }
-
-            set
-            {
-                if (value > 2000 || value < 10)
-                {
-                    Console.WriteLine("Невозможное водоизмещение корабля(min:10 max:2000)");
-                    throw new Exception();
-                }
-                else
-                {
-                    vodoizmeschenie = value;
-                }
-            }
-        }
-
-        public void Info()
-        {
-            Console.WriteLine($" пассажиров: {passangers} длина: {dlina} водоизмещение: {vodoizmeschenie}");
+            Console.WriteLine($"Корабль: пассажиров:{passangers} длина:{dlina} водоизмещение:{vodoizmeschenie}");
             Console.WriteLine(Predlojenie());
             Console.WriteLine(Ris());
         }
 
-        public string Predlojenie()
+        public override string ToString()
+        {
+            return $"Корабль с водоизмещением {vodoizmeschenie}  громко гудит";
+        }
+
+        public override string Predlojenie()
         {
             return $"Корабль с длиной {dlina} метров вышел в открытое море";
         }

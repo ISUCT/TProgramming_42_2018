@@ -28,8 +28,18 @@ namespace CourseApp
                 Console.WriteLine($"y({x})={Func(x, a, b)}");
             }
 
-            Ship admiral = new Ship(40);
-            admiral.Info();
+            Ship admiral = new Ship();
+            Kater carter = new Kater();
+            Console.WriteLine(admiral);
+            Console.WriteLine(carter);
+            Transport[] transports = new Transport[2];
+            transports[0] = new Ship();
+            transports[1] = new Kater();
+            foreach (Transport i in transports)
+            {
+                i.Info();
+            }
+
             Console.ReadLine();
         }
     }
