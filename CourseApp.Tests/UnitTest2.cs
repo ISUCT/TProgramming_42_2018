@@ -18,14 +18,15 @@ namespace CourseApp.Tests
             Assert.Equal(0.45, kalibr);
             Assert.Equal(7, emkostmag);
             Assert.Equal(1.4f, mass);
-           
         }
+
         [Fact]
         public void Test13()
         {
-            Pistol Colt = new Pistol();
-            string pistol = Colt.Display();
-            Assert.Equal(@"
+            Pistol colt = new Pistol();
+            string pistol = colt.Display();
+            Assert.Equal(
+                @"
 
       +-'~`---------------------------------/\--
  ||"""""""""""""""""""""""""""""""" \\\\\\  \/~)
@@ -46,6 +47,7 @@ namespace CourseApp.Tests
 
 ", pistol);
         }
+
         [Fact]
         public void Test14()
         {
@@ -55,9 +57,8 @@ namespace CourseApp.Tests
             var mass = colt.Mass;
             var emkostmag = colt.Emkostmag;
             Assert.Equal("Colt", name);
-            string Pistol = colt.GetInfo();
-            Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", Pistol);
+            string pistol = colt.ToString();
+            Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", pistol);
         }
-
     }
 }
