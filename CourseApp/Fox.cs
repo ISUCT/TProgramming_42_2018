@@ -2,58 +2,37 @@
 
 namespace CourseApp
 {
-    public class Fox
+    public class Fox : Animals
     {
-        private int age;
-
         public Fox()
-            : this("Первая", "Рыжая", 3)
+    : base()
         {
-        } // 1 конструктор
+            Age = 2;
+        } // 1 конструктор (перекрытый)
 
         public Fox(string name, string color)
-            : this(name, color, 3)
+            : this(name, color, 3) // 2 конструктор
         {
-        } // 2 конструктор
+        }
 
         public Fox(string name, string color, int age)
         {
             Name = name;
             Color = color;
-            this.age = age;
+            Age = age;
         } // 3 конструктор
 
-        public string Name { get; set; }
-
-        public string Color { get; set; }
-
-        public int Age
+        public override void GetInfo()
         {
-            get
-            {
-                return age;
-            }
-
-            set
-            {
-                if (value > 0)
-                {
-                    this.age = value;
-                }
-            }
+            Console.WriteLine($"Имя: {Name} Цвет: {Color} Возраст: {Age}");
         }
 
-        public void GetInfo()
+        public override string Mut()
         {
-            Console.WriteLine($"Имя: {Name} Цвет: {Color} Возраст: {age}");
+            return $"Из-за странного корма все лисы мутировали, покорили мир и сделали людей своими рабами";
         }
 
-        public void Mut()
-        {
-            Console.WriteLine($"Из-за странного корма все лисы мутировали, покорили мир и сделали людей своими рабами");
-        }
-
-        public string GetView()
+        public override string GetView()
         {
             return @"   
                                                                    ,-,

@@ -34,21 +34,24 @@ namespace CourseApp
 
             Fox one = new Fox(); // вызов 1-ого
             Fox two = new Fox("Вторая", "Черная"); // вызов 2-ого
-            Fox three = new Fox("Третья", "Белая", 4); // вызов 3-ого
 
-            one.GetInfo();
-
-            one.Age = 5;
-            Console.WriteLine(one.Name);
-            one.GetInfo();
-            one.Age = -1;
+            Wolf three = new Wolf("Злой", "Многоцветный", 4); // вызов 3-ого
 
             one.GetInfo();
             two.GetInfo();
+            Console.WriteLine(one.Mut());
             three.GetInfo();
-            string getview = one.GetView();
-            Console.WriteLine(getview);
-            one.Mut();
+            Console.WriteLine(three.ToString());
+            Console.WriteLine(three.Mut());
+            Console.WriteLine(one.GetView());
+            Console.WriteLine(three.GetView());
+            Animals[] animals = new Animals[2];
+            animals[0] = new Fox("Первая", "Рыжая", 3);
+            animals[1] = new Wolf("Покусанный", "Облезлый", 5);
+            foreach (Animals i in animals)
+            {
+                i.GetInfo();
+            }
 
             Console.Read();
         }
