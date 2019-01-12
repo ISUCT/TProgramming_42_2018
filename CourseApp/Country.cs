@@ -2,55 +2,42 @@ using System;
 
 namespace ConsoleApp1
 {
-    public class Country
+    public class Country : Land
     {
-        private int people;
-
         public Country()
-            : this(24140800, 7692024, "Australiya")
+            : base()
         {
+            People = 24140800;
+            Square = 7692024;
         }
 
-        public Country(int a, double b)
+        public Country(int a, float b)
             : this(a, b, "Kohma")
         {
         }
 
-        public Country(int people, double square, string name)
+        public Country(int people, float square, string name)
         {
-            this.people = people;
-            this.Square = square;
-            this.Name = name;
+            People = people;
+            Square = square;
+            Name = name;
         }
 
-        public double Square { get; set; }
-
-        public string Name { get; set; }
-
-        public int People
+        public override void GetInfo()
         {
-            get
-            {
-                return people;
-            }
-
-            set
-            {
-                if (value > 0)
-                {
-                    this.people = value;
-                }
-            }
+            Console.WriteLine("Земля - страна");
+            Console.WriteLine($"Имя: {Name}, население: {People}, площадь: {Square} ");
+            Console.WriteLine(Voice());
         }
 
-        public void GetInfo()
+        public override string ToString()
         {
-            Console.WriteLine($"Население:{people} Площадь:{Square}  название страны: {Name}");
+            return $"Страна {Name} находится в Евразии";
         }
 
-                public string Dhou()
+        public override string Voice()
         {
-            return $"Strana {Name} skasala: \'Dhou!\', a mne nado pomenyat dillera";
+            return $"Страна {Name} сказала \'Dhou!\', погружаясь в лаву";
         }
     }
     }

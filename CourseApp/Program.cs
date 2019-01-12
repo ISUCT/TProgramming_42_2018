@@ -33,17 +33,45 @@ namespace ConsoleApp1
 
             Console.WriteLine();
             Country country1 = new Country();
+            Country country2 = new Country(30316, 12);
+            Island ost = new Island(47, 5000, "Madagaskar");
 
-            Country country2 = new Country(30316, 12.6);
             country1.GetInfo();
             country1.People = 34140800;
             country1.GetInfo();
             country1.People = -1;
             country1.GetInfo();
             country2.GetInfo();
+            ost.GetInfo();
             Console.Read();
-            string word = country2.Dhou();
+            string word = country2.Voice();
             Console.WriteLine(word);
+
+            Island madagaskar = new Island();
+            madagaskar.GetInfo();
+            Console.WriteLine(madagaskar);
+
+            Land[] land = new Land[2];
+            land[0] = new Island();
+            land[1] = new Country();
+
+            Console.WriteLine("\nдисплей в массиве\n");
+            foreach(Land l in land)
+            {
+                l.GetInfo();
+            }
+
+            Console.Read();
+        }
+
+        private static string Ost(Island madagaskar)
+        {
+            return madagaskar.Voice();
+        }
+
+        private static string Str(Country country1)
+        {
+            return country1.Voice();
+        }
     }
-}
 }

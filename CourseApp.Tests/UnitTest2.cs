@@ -16,20 +16,20 @@ namespace CourseApp.Tests
             var name = country1.Name;
 
             Assert.Equal(24140800, people);
-            Assert.Equal(7692024, square);
-            Assert.Equal("Australiya", name);
+            Assert.Equal(7692024, (double)square);
+            Assert.Equal("Неизвестная земля", name);
         }
 
         [Fact]
         public void Test8()
         {
-            Country country2 = new Country(30316, 12.6);
+            Country country2 = new Country(30316, 12);
             var people = country2.People;
             var square = country2.Square;
             var name = country2.Name;
 
             Assert.Equal(30316, people);
-            Assert.Equal(12.6, square);
+            Assert.Equal(12, (double)square);
             Assert.Equal("Kohma", name);
         }
 
@@ -38,9 +38,9 @@ namespace CourseApp.Tests
         {
             Country country2 = new Country();
             var name = country2.Name;
-            Assert.Equal("Australiya", name);
+            Assert.Equal("Неизвестная земля", name);
             string word = $"Strana {name} skasala: \'Dhou!\', a mne nado pomenyat dillera";
-            Assert.Equal($"Strana Australiya skasala: \'Dhou!\', a mne nado pomenyat dillera", word);
+            Assert.Equal($"Strana Неизвестная земля skasala: \'Dhou!\', a mne nado pomenyat dillera", word);
         }
     }
 }
