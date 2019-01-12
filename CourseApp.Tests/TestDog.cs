@@ -4,10 +4,10 @@ using CourseApp;
 
 namespace CourseApp.Tests
 {
-    public class UnitTest2
+    public class TestDog
     {
         [Fact]
-        public void Test6()
+        public void Test_ProverkaBezZnachenij()
         {
            Dog snech = new Dog();
 
@@ -17,7 +17,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test7()
+        public void Test_ProverkaPolaGirl()
         {
             Dog snech = new Dog("S");
             Assert.Equal(12, snech.Age);
@@ -25,7 +25,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test8()
+        public void Test_ProverkaPolaBoy()
         {
             Dog snech = new Dog("K");
             Assert.Equal(14, snech.Age);
@@ -33,7 +33,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test9()
+        public void Test_ProverkaMetodaPicture()
         {
             Dog snech = new Dog();
             Assert.Equal(
@@ -44,14 +44,14 @@ o'')}____//
         }
 
         [Fact]
-        public void Test10()
+        public void Test_ProverkaMetodaGolos()
         {
             Dog snech = new Dog();
             Assert.Equal($"собака возраста {15} подала голос гав-гав ", snech.Golos());
         }
 
         [Fact]
-        public void Test11()
+        public void Test_ProverkaMetodaToString()
         {
             Dog snech = new Dog();
             Assert.Equal("собака возраста 15 и полом K", snech.ToString());

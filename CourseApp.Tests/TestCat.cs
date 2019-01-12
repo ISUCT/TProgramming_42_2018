@@ -4,10 +4,10 @@ using CourseApp;
 
 namespace CourseApp.Tests
 {
-    public class UnitTest3
+    public class TestCat
     {
         [Fact]
-        public void Test12()
+        public void Test_ProverkaBezZnachenij()
         {
            Cat murka = new Cat();
 
@@ -17,7 +17,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test13()
+        public void Test_ProverkaPolaBoy()
         {
             Cat murka = new Cat("K");
             Assert.Equal(9, murka.Age);
@@ -25,7 +25,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test14()
+        public void Test_ProverkaPolaGirl()
         {
             Cat murka = new Cat("Kisa");
             Assert.Equal(11, murka.Age);
@@ -33,7 +33,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test15()
+        public void Test_ProverkaMetodaPicture()
         {
             Cat murka = new Cat();
             Assert.Equal(
@@ -48,14 +48,14 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test16()
+        public void Test_ProverkaMetodaGolos()
         {
             Cat murka = new Cat();
             Assert.Equal($"кот возраста {15} подал голос мяу ", murka.Golos());
         }
 
         [Fact]
-        public void Test17()
+        public void Test_ProverkaMetodaToString()
         {
             Cat murka = new Cat();
             Assert.Equal("кот возраста 15 и полом K", murka.ToString());

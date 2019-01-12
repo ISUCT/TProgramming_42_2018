@@ -4,10 +4,10 @@ using CourseApp;
 
 namespace CourseApp.Tests
 {
-    public class UnitTest4
+    public class TestAbstractClass
     {
         [Fact]
-        public void Test18()
+        public void Test_ProverkaRabotyMassivaClassov()
         {
             Pet[] pet = new Pet[2];
             pet[0] = new Dog();
