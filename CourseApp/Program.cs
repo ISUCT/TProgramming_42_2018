@@ -1,38 +1,47 @@
-﻿using System;
-namespace ConsoleApp3
+﻿namespace CourseApp
 {
-    class Program
+    using System;
+
+    public class Program
     {
-        public static double y(double x, double a, double b)
+        private static void Main()
         {
-            return (Math.Sqrt(x) * a - (Math.Log(x, 5) * b) / Math.Log10(Math.Abs(x - 1)));
-        }
+            Console.WriteLine("13 вариант");
+            Console.WriteLine();
 
-        static void Main(string[] args)
+            Employee one = new Employee(); // создание 1-го
+            Employee two = new Employee("Nikita", "Singh", "Miss", 35, 153, 55, DateTime.Now); // создание 2-го
 
-        {
-            double a = 4.1;
-            double b = 2.7;
-            double xn = 1.2;
-            double xk = 5.2;
-            double dx = 0.8;
+            Skateboarder three = new Skateboarder("Candy", "Jacobs", "Ms", 28, 165, 64, "goofy"); // создание 3-го
 
-            double[] x = new double[5] { 1.9, 2.15, 2.34, 2.73, 3.16 };
+            one.GetInfo();
+            two.GetInfo();
+            two.Injury();
+            two.GetInfo();
 
-            Console.WriteLine("Задача A:");
+            three.GetInfo();
+            three.Injury();
+            three.GetInfo();
 
-            for (double xl = xn; xl < xk; xl += dx)
+            Console.WriteLine(one.GetHireDate());
+            Console.WriteLine(two.GetHireDate());
+            Console.WriteLine(three.GetHireDate());
+            Console.WriteLine();
+
+            Console.WriteLine(one.ToString());
+            Console.WriteLine(two.ToString());
+            Console.WriteLine(three.ToString());
+            Console.WriteLine();
+
+            HumanBeing[] humanBeings = new HumanBeing[2];
+            humanBeings[0] = new Employee("Гога", "Воробьёв", 20, DateTime.Now);
+            humanBeings[1] = new Skateboarder("Жора", "Воробьёв-Насос", 20, "regular");
+            foreach(HumanBeing i in humanBeings)
             {
-                Console.WriteLine($"Для x = {xl}\t y = {y(xl, a, b):f3}");
+                i.GetInfo();
             }
 
-            Console.WriteLine("Задача B:");
-
-            foreach (double i in x)
-            {
-                Console.WriteLine($"Для x = {i}\t y = {y(i, a, b):f3}");
-            }
-            Console.ReadKey();
+            Console.Read();
         }
     }
 }
