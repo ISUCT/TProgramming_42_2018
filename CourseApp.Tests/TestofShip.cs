@@ -4,7 +4,7 @@ using CourseApp;
 
 namespace CourseApp.Tests
 {
-    public class UnitTest2
+    public class TestofShip
     {
         [Fact]
         public void TestofRis()

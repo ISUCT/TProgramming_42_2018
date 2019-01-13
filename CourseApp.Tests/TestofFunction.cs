@@ -4,7 +4,7 @@ using CourseApp;
 
 namespace CourseApp.Tests
 {
-    public class UnitTest1
+    public class TestofFunction
     {
         [Fact]
         public void Test1()
