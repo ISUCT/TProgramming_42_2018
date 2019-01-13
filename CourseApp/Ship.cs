@@ -8,6 +8,8 @@ namespace CourseApp
 {
     public class Ship : Transport
     {
+        private int vodoizmeschenie;
+
         public Ship()
             : base()
         {
@@ -16,18 +18,39 @@ namespace CourseApp
             Vodoizmeschenie = 100;
         }
 
-        public Ship(int b)
+        public Ship(int dlina)
         {
             Passangers = 25;
-            Dlina = b;
+            Dlina = dlina;
             Vodoizmeschenie = 100;
         }
 
-        public Ship(int a, int b, int c)
+        public Ship(int passangers, int dlina, int vodoizmeschenie)
         {
-            Passangers = a;
-            Dlina = b;
-            Vodoizmeschenie = c;
+            Passangers = passangers;
+            Dlina = dlina;
+            Vodoizmeschenie = vodoizmeschenie;
+        }
+
+        public int Vodoizmeschenie
+        {
+            get
+            {
+                return vodoizmeschenie;
+            }
+
+            set
+            {
+                if (value > 2000 || value < 10)
+                {
+                    Console.WriteLine("Невозможное водоизмещение корабля(min:10 max:2000)");
+                    throw new Exception();
+                }
+                else
+                {
+                    vodoizmeschenie = value;
+                }
+            }
         }
 
         public override void Info()

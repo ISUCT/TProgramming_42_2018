@@ -6,11 +6,6 @@ namespace CourseApp
     {
         private int passangers;
         private int dlina;
-        private int vodoizmeschenie;
-
-        public Transport()
-        {
-        }
 
         public int Passangers
         {
@@ -50,27 +45,6 @@ namespace CourseApp
                 else
                 {
                     dlina = value;
-                }
-            }
-        }
-
-        public int Vodoizmeschenie
-        {
-            get
-            {
-                return vodoizmeschenie;
-            }
-
-            set
-            {
-                if (value > 2000 || value < 10)
-                {
-                    Console.WriteLine("Невозможное водоизмещение корабля(min:10 max:2000)");
-                    throw new Exception();
-                }
-                else
-                {
-                    vodoizmeschenie = value;
                 }
             }
         }

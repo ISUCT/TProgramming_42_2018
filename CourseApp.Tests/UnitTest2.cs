@@ -10,7 +10,6 @@ namespace CourseApp.Tests
         public void Test9()
         {
             Ship admiral = new Ship();
-            var resRis = admiral.Ris();
             Assert.Equal(
                 @"_¶¶¶
 _____________________¶
@@ -51,28 +50,23 @@ _______¶¶_____________________________¶¶
 ________¶¶___________________________¶¶
 _________¶¶________________________¶¶¶
 ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
-", resRis);
+", admiral.Ris());
         }
 
         [Fact]
         public void Test10()
         {
             Ship admiral = new Ship();
-            var passangers = admiral.Passangers;
-            var dlina = admiral.Dlina;
-            var vodoizmeschenie = admiral.Vodoizmeschenie;
-            Assert.Equal(20, passangers);
-            Assert.Equal(55, dlina);
-            Assert.Equal(100, vodoizmeschenie);
+            Assert.Equal(20, admiral.Passangers);
+            Assert.Equal(55, admiral.Dlina);
+            Assert.Equal(100, admiral.Vodoizmeschenie);
         }
 
         [Fact]
         public void Test11()
         {
             Ship admiral = new Ship();
-            var resPredlojenie = admiral.Predlojenie();
-            var dlina = admiral.Dlina;
-            Assert.Equal($"Корабль с длиной {dlina} метров вышел в открытое море", resPredlojenie);
+            Assert.Equal($"Корабль с длиной {admiral.Dlina} метров вышел в открытое море", admiral.Predlojenie());
         }
     }
 }

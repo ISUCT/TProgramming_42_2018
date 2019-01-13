@@ -10,7 +10,6 @@ namespace CourseApp.Tests
         public void Test12()
         {
             Kater carter = new Kater();
-            var resPicture = carter.Picture();
             Assert.Equal(
                 @"
 
@@ -22,28 +21,23 @@ namespace CourseApp.Tests
 ░░░▀█████████████████████████▄▄▄▄▄▄▄▄▄░░
 ░░░░░▀▀███████████████████████████████░░
 ░░░░░░░░░░░▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀░░░
-", resPicture);
+", carter.Picture());
         }
 
         [Fact]
         public void Test13()
         {
             Kater carter = new Kater();
-            var passangers = carter.Passangers;
-            var dlina = carter.Dlina;
-            var vodoizmeschenie = carter.Vodoizmeschenie;
-            Assert.Equal(5, passangers);
-            Assert.Equal(10, dlina);
-            Assert.Equal(15, vodoizmeschenie);
+            Assert.Equal(5, carter.Passangers);
+            Assert.Equal(10, carter.Dlina);
+            Assert.Equal(50, carter.Maxspeed);
         }
 
         [Fact]
         public void Test14()
         {
             Kater carter = new Kater();
-            var resPredlojenie = carter.Predlojenie();
-            var dlina = carter.Dlina;
-            Assert.Equal($"Катер с длиной {dlina} метров поплыл вдоль реки", resPredlojenie);
+            Assert.Equal($"Катер с длиной {carter.Dlina} метров поплыл вдоль реки", carter.Predlojenie());
         }
     }
 }

@@ -4,17 +4,40 @@ namespace CourseApp
 {
     public class Kater : Transport
     {
+        private int maxspeed;
+
         public Kater()
             : base()
         {
             Passangers = 5;
             Dlina = 10;
-            Vodoizmeschenie = 15;
+            Maxspeed = 50;
+        }
+
+        public int Maxspeed
+        {
+            get
+            {
+                return maxspeed;
+            }
+
+            set
+            {
+                if (value > 400 || value < 1)
+                {
+                    Console.WriteLine("Невозможное водоизмещение корабля(min:10 max:2000)");
+                    throw new Exception();
+                }
+                else
+                {
+                    maxspeed = value;
+                }
+            }
         }
 
         public override void Info()
         {
-            Console.WriteLine($"Катер: пассажиров:{Passangers} длина:{Dlina} водоизмещение:{Vodoizmeschenie}");
+            Console.WriteLine($"Катер: пассажиров:{Passangers} длина:{Dlina}, максимальная скорость:{Maxspeed}");
             Console.WriteLine(Predlojenie());
             Console.WriteLine(Picture());
         }
