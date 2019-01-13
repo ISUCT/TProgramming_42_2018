@@ -7,7 +7,7 @@ namespace CourseApp.Tests
     public class UnitTest2
     {
         [Fact]
-        public void Test9()
+        public void TestofRis()
         {
             Ship admiral = new Ship();
             Assert.Equal(
@@ -54,7 +54,7 @@ ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
         }
 
         [Fact]
-        public void Test10()
+        public void Testofznacheniya()
         {
             Ship admiral = new Ship();
             Assert.Equal(20, admiral.Passangers);
@@ -63,7 +63,7 @@ ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
         }
 
         [Fact]
-        public void Test11()
+        public void Testofpredlojenia()
         {
             Ship admiral = new Ship();
             Assert.Equal($"Êîğàáëü ñ äëèíîé {admiral.Dlina} ìåòğîâ âûøåë â îòêğûòîå ìîğå", admiral.Predlojenie());

@@ -7,7 +7,7 @@ namespace CourseApp.Tests
     public class UnitTest3
     {
         [Fact]
-        public void Test12()
+        public void TestofPicture()
         {
             Kater carter = new Kater();
             Assert.Equal(
@@ -25,7 +25,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test13()
+        public void Testofznacheniya()
         {
             Kater carter = new Kater();
             Assert.Equal(5, carter.Passangers);
@@ -34,7 +34,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void Test14()
+        public void Testofpredlojeniya()
         {
             Kater carter = new Kater();
             Assert.Equal($"Катер с длиной {carter.Dlina} метров поплыл вдоль реки", carter.Predlojenie());
