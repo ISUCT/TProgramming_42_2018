@@ -47,6 +47,13 @@ namespace CourseApp
                 i.Info();
             }
 
+            int y = 1999; // year
+            int m = 5; // Mothe
+            int d = 11; // day
+            Date dr = new Date();
+            DateTime hbd = new DateTime(y, m, d);
+            Console.WriteLine($"vozrast = {dr.Vozrost(hbd)}");
+
             Console.ReadLine();
         }
     }
