@@ -39,6 +39,8 @@ namespace CourseApp
                 i.GetInfo();
             }
 
+            GetAge getAge = new GetAge();
+            getAge.GetInfo();
             Console.ReadKey();
         }
     }
