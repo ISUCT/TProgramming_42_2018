@@ -40,7 +40,7 @@ namespace CourseApp
             }
 
             GetAge getAge = new GetAge();
-            getAge.GetInfo();
+            getAge.GetInfo(30, 09, 1978);
             Console.ReadKey();
         }
     }
