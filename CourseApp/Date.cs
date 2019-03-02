@@ -7,7 +7,7 @@ namespace CourseApp
     {
         public string Vozrost(DateTime hbd)
         {
-            DateTime today = DateTime.Today;
+            DateTime today = new DateTime(2019, 3, 2);
             today = today.AddYears(-hbd.Year);
             today = today.AddMonths(-hbd.Month);
             today = today.AddDays(-hbd.Day);

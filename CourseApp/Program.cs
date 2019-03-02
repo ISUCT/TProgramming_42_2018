@@ -47,11 +47,11 @@ namespace CourseApp
                 i.Info();
             }
 
-            int y = 1999; // year
+           /* int y = 1999; // year
             int m = 5; // Mothe
-            int d = 11; // day
+            int d = 11; // day*/
             Date dr = new Date();
-            DateTime hbd = new DateTime(y, m, d);
+            DateTime hbd = new DateTime(1999, 5, 11);
             Console.WriteLine($"vozrast = {dr.Vozrost(hbd)}");
 
             Console.ReadLine();
