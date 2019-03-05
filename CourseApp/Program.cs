@@ -63,6 +63,11 @@ namespace CourseApp
             {
                 l.Display();
             }
+
+            DateTime dateOfBorn = new DateTime(1999, 10, 26);
+            DateTime dateOfToDay = new DateTime(2019, 03, 05);
+            DateTime age = Date.Calc(dateOfBorn, dateOfToDay);
+            Console.WriteLine($"разность между датами равна {age.Year} лет {age.Month} месяцев {age.Day} дней");
         }
 
         public static string Gav(Dog rex)
