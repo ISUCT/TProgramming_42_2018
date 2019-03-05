@@ -48,6 +48,9 @@ namespace CourseApp
                 Console.WriteLine(i.Picture());
             }
 
+            Date data = new Date();
+            DateTime vremya = new DateTime(1999, 07, 08);
+            Console.WriteLine(data.Age(vremya));
             Console.ReadLine();
         }
     }
