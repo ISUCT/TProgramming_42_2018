@@ -48,8 +48,9 @@ namespace CourseApp
             }
 
             Date dr = new Date();
+            DateTime td = DateTime.Today;
             DateTime hbd = new DateTime(1999, 5, 11);
-            Console.WriteLine($"vozrast = {dr.Vozrost(hbd)}");
+            Console.WriteLine($"vozrast = {dr.Vozrost(hbd, td)}");
 
             Console.ReadLine();
         }
