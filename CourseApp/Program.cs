@@ -1,4 +1,5 @@
 ﻿using System;
+using CourseApp;
 
 namespace Zadanie1
 {
@@ -39,6 +40,10 @@ namespace Zadanie1
                 i.GetInfo();
             }
 
+            DateTime data1 = new DateTime(1999, 10, 26);
+            DateTime data2 = new DateTime(2019, 03, 05);
+            DateTime age = Date.Calc(data1, data2);
+            Console.WriteLine($"Прожито {age.Year} лет {age.Month} месяцев {age.Day} дней");
             Console.ReadKey();
         }
     }
