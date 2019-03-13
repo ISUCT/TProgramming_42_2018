@@ -91,7 +91,7 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return $"это Свинья возраста {Age}  и массой {Salo}";
+            return $"it's a Pig of the age of {Age} and weighing {Salo}";
         }
 
         public string Cut()
@@ -118,11 +118,12 @@ namespace CourseApp
             Console.WriteLine(Graz());
             Console.WriteLine(Voice());
             Console.WriteLine(Ris());
+            Console.WriteLine(Cut());
         }
 
         public string Graz()
         {
-            return $"свинья возраста {Age} пошла поваляться в грязи  ";
+            return $"pig age {Age} went to lie in the mud ";
         }
 
         public override string Ris()

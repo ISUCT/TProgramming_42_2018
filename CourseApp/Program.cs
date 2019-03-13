@@ -15,10 +15,10 @@ namespace CourseApp
             float a = 0.8f;
             float b = 0.4f;
 
-            // задание а
-            float xn = 1.23f; // х начальное
-            float xk = 7.23f; // х конечное
-            float dx = 1.2f; // шаг
+            // a
+            float xn = 1.23f; // x first
+            float xk = 7.23f; // х last
+            float dx = 1.2f; // stap
             Console.WriteLine(" a)");
             for (float x = xn; x <= xk; x += dx)
             {
@@ -47,13 +47,14 @@ namespace CourseApp
                 i.Info();
             }
 
-            Pig alkash = new Pig(15);
-            Pig pitochok = new Pig(9);
+            Pig alkash = new Pig(5);
+            Pig pitochok = new Pig(20);
 
             Pig[] slaughterhouse = new Pig[] { svin, alkash, pitochok };
 
             Array.Sort(slaughterhouse);
             Console.WriteLine("vasha svinii na uboi");
+            Console.WriteLine("Salo-Age");
             foreach (Pig o in slaughterhouse)
             {
                 Console.WriteLine("{0} - {1}", o.Salo, o.Age);

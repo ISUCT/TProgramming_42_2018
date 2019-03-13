@@ -99,14 +99,14 @@ namespace CourseApp.Tests
         {
             Pig svin = new Pig();
             var resGraz = svin.Graz();
-            Assert.Equal($"свинья возраста {20} пошла поваляться в грязи  ", resGraz);
+            Assert.Equal($"pig age 20 went to lie in the mud ", resGraz);
         }
 
         [Fact]
         public void Test24()
         {
             Pig svin = new Pig();
-            Assert.Equal("это Свинья возраста 20  и массой 70", svin.ToString());
+            Assert.Equal("it's a Pig of the age of 20 and weighing 70", svin.ToString());
         }
     }
 }
