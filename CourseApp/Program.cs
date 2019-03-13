@@ -47,6 +47,18 @@ namespace CourseApp
                 i.Info();
             }
 
+            Pig alkash = new Pig(15);
+            Pig pitochok = new Pig(9);
+
+            Pig[] slaughterhouse = new Pig[] { svin, alkash, pitochok };
+
+            Array.Sort(slaughterhouse);
+            Console.WriteLine("vasha svinii na uboi");
+            foreach (Pig o in slaughterhouse)
+            {
+                Console.WriteLine("{0} - {1}", o.Salo, o.Age);
+            }
+
             Date dr = new Date();
             DateTime td = DateTime.Today;
             DateTime hbd = new DateTime(1999, 5, 11);
