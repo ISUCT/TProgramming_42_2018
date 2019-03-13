@@ -63,5 +63,13 @@ namespace CourseApp.Tests
             string toStr = rex.ToString();
             Assert.Equal($"Пес Rex почесал за ухом", toStr );
         }
+
+        [Fact]
+        public void Dog4()
+        {
+            Dog rex = new Dog();
+            string washing = rex.Wash(rex);
+            Assert.Equal($"Rex испачкался и его пришлось мыть", washing );
+        }
     }
 }

@@ -106,5 +106,21 @@ namespace CourseApp.Tests
             string toStr = tom.ToString();
             Assert.Equal($"Кот Том замурлыкал", toStr);
         }
+
+        [Fact]
+        public void Cat7()
+        {
+            Cat tom = new Cat();
+            string washing = tom.Wash(tom);
+            Assert.Equal($"кот Том умылся лапками", washing);
+        }
+
+        [Fact]
+        public void Cat8()
+        {
+            Cat red = new Cat("Рыжик", 6);
+            string washing = red.Wash(red);
+            Assert.Equal($"кот Рыжик умылся лапками", washing);
+        }
     }
 }

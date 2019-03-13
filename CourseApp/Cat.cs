@@ -2,7 +2,7 @@ using System;
 
 namespace CourseApp
 {
-    public class Cat : Animal
+    public class Cat : Animal, IWash, IComparable
     {
         public Cat()
             : this("Том", 5)
@@ -21,6 +21,25 @@ namespace CourseApp
             : this(name, 7)
         {
             Color = color;
+        }
+
+        public string Wash(object o)
+        {
+            Cat c = o as Cat;
+            return $"кот {c.Name} умылся лапками";
+        }
+
+        public int CompareTo(object o)
+        {
+            Cat p = o as Cat;
+            if (p != null)
+            {
+                return this.Name.CompareTo(p.Name);
+            }
+            else
+            {
+                throw new Exception("Невозможно сравнить два объекта");
+            }
         }
 
         public override void Display()
