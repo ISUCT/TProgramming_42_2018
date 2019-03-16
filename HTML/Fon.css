@@ -1,0 +1,15 @@
+body
+		{
+		background: #000000 url(Red_stena.jpg);
+		background-size: 2000px 1273px;	
+        }
+		div.container {
+  width: 96%;
+  max-width: 600px;
+  max-height:1px;
+  margin-right:1000px; /* центрируем основной контейнер */
+}
+img {
+  width: 100%; /* ширина картинки */
+  height: auto; /* высота картинки */
+}
