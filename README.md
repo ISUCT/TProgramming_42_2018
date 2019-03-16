@@ -2,4 +2,4 @@
 
 Русанов Константин  
 
-https://rusanovkonstantin.github.io/index.html
+https://rusanovkonstantin.github.io/Avatar.html
