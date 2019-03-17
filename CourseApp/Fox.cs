@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Fox : Animals
+    public class Fox : Animals, IKus, IComparable
     {
         public Fox()
     : base()
@@ -21,6 +21,24 @@ namespace CourseApp
             Color = color;
             Age = age;
         } // 3 конструктор
+
+        public string Kus()
+        {
+            return "Лиса сделала КУСЬ!";
+        }
+
+        public int CompareTo(object o)
+        {
+            Fox f = o as Fox;
+            if (f != null)
+            {
+                return this.Name.CompareTo(f.Name);
+            }
+            else
+            {
+                throw new Exception("Невозможно сравнить два объекта");
+            }
+        }
 
         public override void GetInfo()
         {
