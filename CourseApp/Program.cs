@@ -49,8 +49,22 @@ namespace CourseApp
             }
 
             Date data = new Date();
+            DateTime today = DateTime.Today;
             DateTime vremya = new DateTime(1999, 07, 08);
-            Console.WriteLine(data.Age(vremya));
+            Console.WriteLine(data.Age(vremya, today));
+
+            Dog nura = new Dog("S");
+            Dog sharik = new Dog("S");
+
+            Dog[] homeanimals = new Dog[] { snech, nura, sharik };
+
+            Array.Sort(homeanimals);
+            foreach (Dog o in homeanimals)
+            {
+                Console.WriteLine("{0} - {1}", o.Weight, o.Pol);
+            }
+
+            Console.WriteLine(snech.Stroke_dog());
             Console.ReadLine();
         }
     }

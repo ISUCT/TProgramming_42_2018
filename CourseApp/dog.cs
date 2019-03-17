@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Dog : Pet
+    public class Dog : Pet, IStroke_dog, IComparable
     {
         public Dog()
             : base()
@@ -28,6 +28,24 @@ namespace CourseApp
         public override float Weight { get; set; }
 
         public override int Age { get; set; }
+
+        public string Stroke_dog()
+        {
+            return "stroke a dog";
+        }
+
+        public int CompareTo(object o)
+        {
+            Dog d = o as Dog;
+            if (d != null)
+            {
+                return this.Age.CompareTo(d.Age);
+            }
+            else
+            {
+                throw new Exception("Невозможно сравнить два объекта");
+            }
+        }
 
         public override void GetInfo()
         {

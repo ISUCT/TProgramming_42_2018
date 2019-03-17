@@ -5,9 +5,9 @@ namespace CourseApp
 {
     public class Date
     {
-        public string Age(DateTime birthday)
+        public string Age(DateTime birthday, DateTime today)
         {
-            DateTime date = new DateTime(2019, 03, 05);
+            DateTime date = today;
             date = date.AddYears(-birthday.Year);
             date = date.AddMonths(-birthday.Month);
             date = date.AddDays(-birthday.Day);
