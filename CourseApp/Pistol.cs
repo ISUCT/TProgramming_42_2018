@@ -1,8 +1,8 @@
 using System;
 
-namespace Zadanie1
+namespace CourseApp
 {
-    public class Pistol : Gun
+    public class Pistol : Gun, IShoot, IComparable
     {
         public Pistol()
         {
@@ -10,7 +10,7 @@ namespace Zadanie1
             Kalibr = 0.45;
             Mass = 1.4f;
             Emkostmag = 7;
-        }
+         }
 
         public Pistol(string name, double kalibr, float mass )
             : base(name, kalibr, mass)
@@ -18,9 +18,28 @@ namespace Zadanie1
             Emkostmag = 7;
         }
 
+        public string Shoot(object o)
+        {
+            Pistol c = o as Pistol;
+            return $" РЇ РІС‹СЃС‚СЂРµР»РёР» РёР· РїРёСЃС‚РѕР»РµС‚Р° {c.Name} ";
+        }
+
+        public int CompareTo(object o)
+        {
+            Pistol p = o as Pistol;
+            if (p != null)
+            {
+                return this.Name.CompareTo(p.Name);
+            }
+            else
+            {
+                throw new Exception("РќРµРІРѕР·РјРѕР¶РЅРѕ СЃСЂР°РІРЅРёС‚СЊ РґРІР° РѕР±СЉРµРєС‚Р°");
+            }
+            }
+
         public override string ToString()
         {
-            return $"Наименование: {Name}  Калибр: {Kalibr} Масса: {Mass} Емкость магазина: {Emkostmag}\n Пистолет {Name} выстрелил: \"Бах!\"";
+            return $"РќР°РёРјРµРЅРѕРІР°РЅРёРµ: {Name}  РљР°Р»РёР±СЂ: {Kalibr} РњР°СЃСЃР°: {Mass} Р•РјРєРѕСЃС‚СЊ РјР°РіР°Р·РёРЅР°: {Emkostmag}\n РџРёСЃС‚РѕР»РµС‚ {Name} Р’С‹СЃС‚СЂРµР»РёР»: \"Р‘Р°С…!\"";
         }
 
         public override void GetInfo()

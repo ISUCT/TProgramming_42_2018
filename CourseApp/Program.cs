@@ -7,6 +7,10 @@ namespace Zadanie1
     {
         public static object Colt { get; set; }
 
+        public static object Pm { get; set; }
+
+        public static object Walter { get; set; }
+
         public static double Formula(double x)
         {
             double y = (Math.Pow(Math.Sin(x), 3) + Math.Pow(Math.Cos(x), 3)) * Math.Log(x);
@@ -40,10 +44,23 @@ namespace Zadanie1
                 i.GetInfo();
             }
 
-            DateTime data1 = new DateTime(1999, 10, 26);
+            DateTime data1 = new DateTime(1999, 05, 13);
             DateTime data2 = new DateTime(2019, 03, 05);
-            DateTime age = Date.Calc(data1, data2);
-            Console.WriteLine($"Прожито {age.Year} лет {age.Month} месяцев {age.Day} дней");
+            Console.WriteLine("человек прожил - " + Date.Calc(data1, data2 ));
+
+            Pistol colt = new Pistol();
+            Pistol walter = new Pistol("walter", 7.92, 3.5f );
+            Console.WriteLine(colt.Shoot(colt));
+            Console.WriteLine(walter.Shoot(walter));
+
+            Pistol[] arrayOfPistol = new Pistol[] { colt, walter };
+
+            Array.Sort(arrayOfPistol);
+            foreach (Pistol o in arrayOfPistol)
+            {
+                Console.WriteLine("{0} - {1} - {2}", o.Name, o.Kalibr, o.Mass);
+            }
+
             Console.ReadKey();
         }
     }

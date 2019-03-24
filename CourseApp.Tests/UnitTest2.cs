@@ -58,7 +58,7 @@ namespace CourseApp.Tests
             var emkostmag = colt.Emkostmag;
             Assert.Equal("Colt", name);
             string pistol = colt.ToString();
-            Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} выстрелил: \"Бах!\"", pistol);
+            Assert.Equal($"Наименование: {name}  Калибр: {kalibr} Масса: {mass} Емкость магазина: {emkostmag}\n Пистолет {name} Выстрелил: \"Бах!\"", pistol);
         }
     }
 }
