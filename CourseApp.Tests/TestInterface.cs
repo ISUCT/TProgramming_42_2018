@@ -15,7 +15,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TestIComparable_0_15_9()
+        public void TestIComparable0159()
         {
             Pig alkash = new Pig(15);
             Pig pitochok = new Pig(9);
@@ -30,7 +30,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TestIComparable_0_5_20()
+        public void TestIComparable0520()
         {
             Pig alkash = new Pig(5);
             Pig pitochok = new Pig(20);
