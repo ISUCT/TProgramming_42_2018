@@ -2,7 +2,7 @@ using System;
 
 namespace CourseApp
 {
-    public class Dog : Animal
+    public class Dog : Animal, IWash
     {
         public Dog()
             : base()
@@ -10,6 +10,12 @@ namespace CourseApp
             Name = "Rex";
             Age = 5;
             Color = "черный";
+        }
+
+        public string Wash(object o)
+        {
+            Dog c = o as Dog;
+            return $"{c.Name} испачкался и его пришлось мыть";
         }
 
         public override void Display()

@@ -63,6 +63,22 @@ namespace CourseApp
             {
                 l.Display();
             }
+
+            DateTime dateOfBorn = new DateTime(1999,  10, 26);
+            DateTime dateOfToDay = new DateTime(2019, 3, 9);
+            Console.WriteLine(Date.Calc(dateOfBorn, dateOfToDay));
+
+            Console.WriteLine(tom.Wash(tom));
+            Console.WriteLine(red.Wash(red));
+            Console.WriteLine(rex.Wash(rex));
+
+            Cat[] arrayOfCat = new Cat[] {tom, red, begemot };
+
+            Array.Sort(arrayOfCat);
+            foreach (Cat o in arrayOfCat)
+            {
+                Console.WriteLine("{0} - {1}", o.Name, o.Age, o.Color);
+            }
         }
 
         public static string Gav(Dog rex)
