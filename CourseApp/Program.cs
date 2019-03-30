@@ -1,10 +1,15 @@
 ﻿using System;
+using CourseApp;
 
 namespace Zadanie1
 {
     public class Program
     {
         public static object Colt { get; set; }
+
+        public static object Pm { get; set; }
+
+        public static object Walter { get; set; }
 
         public static double Formula(double x)
         {
@@ -37,6 +42,23 @@ namespace Zadanie1
             foreach (Gun i in arsenals)
             {
                 i.GetInfo();
+            }
+
+            DateTime data1 = new DateTime(1999, 05, 13);
+            DateTime data2 = new DateTime(2019, 03, 05);
+            Console.WriteLine("человек прожил - " + Date.Calc(data1, data2 ));
+
+            Pistol colt = new Pistol();
+            Pistol walter = new Pistol("walter", 7.92, 3.5f );
+            Console.WriteLine(colt.Shoot(colt));
+            Console.WriteLine(walter.Shoot(walter));
+
+            Pistol[] arrayOfPistol = new Pistol[] { colt, walter };
+
+            Array.Sort(arrayOfPistol);
+            foreach (Pistol o in arrayOfPistol)
+            {
+                Console.WriteLine("{0} - {1} - {2}", o.Name, o.Kalibr, o.Mass);
             }
 
             Console.ReadKey();

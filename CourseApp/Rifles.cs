@@ -1,8 +1,8 @@
 using System;
 
-namespace Zadanie1
+namespace CourseApp
 {
-    public class Rifles : Gun
+    public class Rifles : Gun, IShoot
     {
         public Rifles()
         {
@@ -17,6 +17,12 @@ namespace Zadanie1
         {
             Emkostmag = 30;
         }
+
+        public string Shoot(object o)
+        {
+            Rifles c = o as Rifles;
+            return $" Я выстрелил из винтовки {c.Name} ";
+}
 
         public override string ToString()
         {

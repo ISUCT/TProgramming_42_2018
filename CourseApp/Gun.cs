@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Zadanie1
+namespace CourseApp
 {
     public abstract class Gun
     {
