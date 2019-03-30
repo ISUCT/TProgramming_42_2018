@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Pig : Animal
+    public class Pig : Animal, ICut, IComparable
     {
         private int age;
 
@@ -91,7 +91,25 @@ namespace CourseApp
 
         public override string ToString()
         {
-            return $"это Свинья возраста {Age}  и массой {Salo}";
+            return $"it's a Pig of the age of {Age} and weighing {Salo}";
+        }
+
+        public string Cut()
+        {
+            return "a pig slaughtered";
+        }
+
+        public int CompareTo(object o)
+        {
+            Pig p = o as Pig;
+            if (p != null)
+            {
+                return this.Age.CompareTo(p.Age);
+            }
+            else
+            {
+                throw new Exception("Невозможно сравнить два объекта");
+            }
         }
 
         public override void Info()
@@ -100,11 +118,12 @@ namespace CourseApp
             Console.WriteLine(Graz());
             Console.WriteLine(Voice());
             Console.WriteLine(Ris());
+            Console.WriteLine(Cut());
         }
 
         public string Graz()
         {
-            return $"свинья возраста {Age} пошла поваляться в грязи  ";
+            return $"pig age {Age} went to lie in the mud ";
         }
 
         public override string Ris()
