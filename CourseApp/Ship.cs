@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseApp
 {
-    public class Ship : Transport
+    public class Ship : Transport, ISwim, IComparable
     {
         private int vodoizmeschenie;
 
@@ -50,6 +50,25 @@ namespace CourseApp
                 {
                     vodoizmeschenie = value;
                 }
+            }
+        }
+
+        public string Swim(object o)
+        {
+            Ship c = o as Ship;
+            return $"Корабль с длиной {c.Dlina} остановился у причала";
+        }
+
+        public int CompareTo(object o)
+        {
+            Ship p = o as Ship;
+            if (p != null)
+            {
+                return this.Dlina.CompareTo(p.Dlina);
+            }
+            else
+            {
+                throw new Exception("Невозможно сравнить");
             }
         }
 

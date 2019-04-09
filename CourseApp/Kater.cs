@@ -2,7 +2,7 @@
 
 namespace CourseApp
 {
-    public class Kater : Transport
+    public class Kater : Transport, ISwim
     {
         private int maxspeed;
 
@@ -33,6 +33,12 @@ namespace CourseApp
                     maxspeed = value;
                 }
             }
+        }
+
+        public string Swim(object o)
+        {
+            Kater c = o as Kater;
+            return $"При создании катера учитывалось,что его длина будет {c.Dlina}";
         }
 
         public override void Info()
