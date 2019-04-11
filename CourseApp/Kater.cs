@@ -9,7 +9,7 @@ namespace CourseApp
         public Kater()
             : base()
         {
-            Passangers = 5;
+            Name = "Carter";
             Dlina = 10;
             Maxspeed = 50;
         }
@@ -38,12 +38,12 @@ namespace CourseApp
         public string Swim(object o)
         {
             Kater c = o as Kater;
-            return $"При создании катера учитывалось,что его длина будет {c.Dlina}";
+            return $"{Name} плывет по течению";
         }
 
         public override void Info()
         {
-            Console.WriteLine($"Катер: пассажиров:{Passangers} длина:{Dlina}, максимальная скорость:{Maxspeed}");
+            Console.WriteLine($"Катер: Имя:{Name} длина:{Dlina}, максимальная скорость:{Maxspeed}");
             Console.WriteLine(Predlojenie());
             Console.WriteLine(Picture());
         }
@@ -55,7 +55,7 @@ namespace CourseApp
 
         public override string Predlojenie()
         {
-            return $"Катер с длиной {Dlina} метров поплыл вдоль реки";
+            return $"Катер {Name} поплыл вдоль реки";
         }
 
         public string Picture()

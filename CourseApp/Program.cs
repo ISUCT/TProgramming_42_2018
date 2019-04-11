@@ -30,13 +30,26 @@ namespace CourseApp
 
             Ship admiral = new Ship();
             Ship lucky = new Ship(90);
-            Ship duty = new Ship(150, 75, 300);
-            Kater carter = new Kater();
+            Ship duty = new Ship("Duty", 75, 300);
+
+            admiral.Info();
+            lucky.Info();
+            duty.Info();
+
+            admiral.Dlina = 200;
+            Console.WriteLine($"Длина Адмирала - {admiral.Dlina} метров");
             Console.WriteLine(admiral);
+            admiral.Info();
+
+            Kater carter = new Kater();
+            carter.Info();
             Console.WriteLine(carter);
+
             Transport[] transports = new Transport[2];
             transports[0] = new Ship();
             transports[1] = new Kater();
+
+            Console.WriteLine("\nинфо в массиве\n");
             foreach (Transport i in transports)
             {
                 i.Info();
@@ -44,14 +57,14 @@ namespace CourseApp
 
             Console.WriteLine(admiral.Swim(admiral));
             Console.WriteLine(lucky.Swim(lucky));
-            Console.WriteLine(duty.Swim(duty));
+            Console.WriteLine(carter.Swim(carter));
 
             Ship[] arrayOfShip = new Ship[] {admiral, lucky, duty };
 
             Array.Sort(arrayOfShip);
             foreach (Ship o in arrayOfShip)
             {
-                Console.WriteLine("{0} - {1}", o.Passangers, o.Dlina, o.Vodoizmeschenie);
+                Console.WriteLine("{0} - {1}", o.Name, o.Dlina, o.Vodoizmeschenie);
             }
 
             Console.ReadLine();

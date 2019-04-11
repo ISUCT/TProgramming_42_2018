@@ -4,26 +4,21 @@ namespace CourseApp
 {
     public abstract class Transport
     {
-        private int passangers;
+        private string name;
         private int dlina;
 
-        public int Passangers
+        public string Name
         {
             get
             {
-                return passangers;
+                return name;
             }
 
             set
             {
-                if (value > 250 || value < 0)
+                if (value != null)
                 {
-                    Console.WriteLine("Невозможное количество пассажиров(min:0 max:250)");
-                    throw new Exception();
-                }
-                else
-                {
-                    passangers = value;
+                    this.name = value;
                 }
             }
         }

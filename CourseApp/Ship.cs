@@ -13,21 +13,21 @@ namespace CourseApp
         public Ship()
             : base()
         {
-            Passangers = 20;
+            Name = "Admiral";
             Dlina = 55;
             Vodoizmeschenie = 100;
         }
 
         public Ship(int dlina)
         {
-            Passangers = 25;
+            Name = "Lucky";
             Dlina = dlina;
             Vodoizmeschenie = 100;
         }
 
-        public Ship(int passangers, int dlina, int vodoizmeschenie)
+        public Ship(string name, int dlina, int vodoizmeschenie)
         {
-            Passangers = passangers;
+            Name = name;
             Dlina = dlina;
             Vodoizmeschenie = vodoizmeschenie;
         }
@@ -56,7 +56,7 @@ namespace CourseApp
         public string Swim(object o)
         {
             Ship c = o as Ship;
-            return $"Корабль с длиной {c.Dlina} остановился у причала";
+            return $"Корабль {c.Name} остановился у причала";
         }
 
         public int CompareTo(object o)
@@ -64,7 +64,7 @@ namespace CourseApp
             Ship p = o as Ship;
             if (p != null)
             {
-                return this.Dlina.CompareTo(p.Dlina);
+                return this.Name.CompareTo(p.Name);
             }
             else
             {
@@ -74,7 +74,7 @@ namespace CourseApp
 
         public override void Info()
         {
-            Console.WriteLine($"Корабль: пассажиров:{Passangers} длина:{Dlina} водоизмещение:{Vodoizmeschenie}");
+            Console.WriteLine($"Корабль: Имя:{Name} длина:{Dlina} водоизмещение:{Vodoizmeschenie}");
             Console.WriteLine(Predlojenie());
             Console.WriteLine(Ris());
         }
@@ -86,7 +86,7 @@ namespace CourseApp
 
         public override string Predlojenie()
         {
-            return $"Корабль с длиной {Dlina} метров вышел в открытое море";
+            return $"Корабль {Name} вышел в открытое море";
         }
 
         public string Ris()
