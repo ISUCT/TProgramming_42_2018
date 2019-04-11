@@ -64,7 +64,7 @@ namespace CourseApp
             Array.Sort(arrayOfShip);
             foreach (Ship o in arrayOfShip)
             {
-                Console.WriteLine("{0} - {1}", o.Name, o.Dlina, o.Vodoizmeschenie);
+                Console.WriteLine("{0} - {1} - {2}", o.Name, o.Dlina, o.Vodoizmeschenie);
             }
 
             Console.ReadLine();
