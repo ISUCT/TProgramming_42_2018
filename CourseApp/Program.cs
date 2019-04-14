@@ -67,6 +67,11 @@ namespace CourseApp
                 Console.WriteLine("{0} - {1} - {2}", o.Name, o.Dlina, o.Vodoizmeschenie);
             }
 
+            Console.WriteLine("\nЗадача на возраст \n");
+            DateTime bornday = new DateTime(1999, 9, 30);
+            DateTime today = new DateTime(2019, 4, 14);
+            Console.WriteLine(Date.SchetVozrasta(bornday, today));
+
             Console.ReadLine();
         }
     }
