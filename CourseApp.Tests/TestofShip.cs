@@ -57,7 +57,7 @@ ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
         public void Testofznacheniya()
         {
             Ship admiral = new Ship();
-            Assert.Equal(20, admiral.Passangers);
+            Assert.Equal("Admiral", admiral.Name);
             Assert.Equal(55, admiral.Dlina);
             Assert.Equal(100, admiral.Vodoizmeschenie);
         }
@@ -66,7 +66,23 @@ ___________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
         public void Testofpredlojenia()
         {
             Ship admiral = new Ship();
-            Assert.Equal($"Корабль с длиной {admiral.Dlina} метров вышел в открытое море", admiral.Predlojenie());
+            Assert.Equal($"Корабль {admiral.Name} вышел в открытое море", admiral.Predlojenie());
+        }
+
+        [Fact]
+        public void AdmiralISwim()
+        {
+            Ship admiral = new Ship();
+            string iswim = admiral.Swim(admiral);
+            Assert.Equal($"Корабль Admiral остановился у причала", iswim);
+        }
+
+        [Fact]
+        public void LuckyISwim()
+        {
+            Ship lucky = new Ship(90);
+            string iswim = lucky.Swim(lucky);
+            Assert.Equal($"Корабль Lucky остановился у причала", iswim);
         }
     }
 }

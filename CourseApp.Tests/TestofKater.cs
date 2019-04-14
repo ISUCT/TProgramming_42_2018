@@ -28,7 +28,7 @@ namespace CourseApp.Tests
         public void Testofznacheniya()
         {
             Kater carter = new Kater();
-            Assert.Equal(5, carter.Passangers);
+            Assert.Equal("Carter", carter.Name);
             Assert.Equal(10, carter.Dlina);
             Assert.Equal(50, carter.Maxspeed);
         }
@@ -37,7 +37,15 @@ namespace CourseApp.Tests
         public void Testofpredlojeniya()
         {
             Kater carter = new Kater();
-            Assert.Equal($"Катер с длиной {carter.Dlina} метров поплыл вдоль реки", carter.Predlojenie());
+            Assert.Equal($"Катер {carter.Name} поплыл вдоль реки", carter.Predlojenie());
+        }
+
+        [Fact]
+        public void CarterISwim()
+        {
+            Kater carter = new Kater();
+            string iswim = carter.Swim(carter);
+            Assert.Equal($"{carter.Name} плывет по течению", iswim);
         }
     }
 }
