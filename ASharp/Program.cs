@@ -7,7 +7,7 @@ namespace ASharp
     {
         public static Dictionary<string, int> Variables = new Dictionary<string, int>();
 
-        public static void SetVariables(string key, int value)
+        public static void SetVariable(string key, int value)
         {
             if(!Program.Variables.ContainsKey(key))
             {
@@ -17,8 +17,6 @@ namespace ASharp
 
         static void Main(string[] args)
         {
-
-
             string path = "D:/ASharp/code.txt";
 
             string[] code = CodeReader.ReadFile(path);

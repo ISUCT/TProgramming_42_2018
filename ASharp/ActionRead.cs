@@ -6,9 +6,9 @@ namespace ASharp
 {
     class ActionRead
     {
-        public ActionRead(string action)
+        public static void Read(string action)
         {
-            
+           
         }
     }
 }

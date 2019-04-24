@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ASharp
 {
@@ -8,15 +7,20 @@ namespace ASharp
     {
         public string Parse(string[] code)
         {
-            foreach(string i in code)
+            string pattern = @"([a-z]+)\s([a-z]+)";
+            foreach (string line in code)
             {
-                switch (i)
+                foreach(Match i in Regex.Matches(line, pattern))
                 {
-                    case "read":
-                        return "";
-                    case "print":
-                        return "";
+                    switch (i.Groups[0].Value)
+                    {
+                        case "read":
+                            ActionRead.Read(i.Groups[1].Value);
+                        case "print":
+                            return "";
+                    }
                 }
+
             }
 
             return "";
