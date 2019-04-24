@@ -16,6 +16,7 @@ namespace ASharp
                     {
                         case "read":
                             ActionRead.Read(i.Groups[1].Value);
+                            break;
                         case "print":
                             return "";
                     }
