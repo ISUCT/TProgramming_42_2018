@@ -65,7 +65,7 @@ namespace CourseApp
             DateTime hbd = new DateTime(1999, 5, 11);
             Console.WriteLine($"vozrast = {dr.Vozrost(hbd, td)}");
 
-            Console.ReadLine();
+                Console.ReadLine();
         }
     }
 }
