@@ -5,26 +5,25 @@ namespace ASharp
 {
     class CodeParser
     {
-        public string Parse(string[] code)
+        public void Parse(string[] code)
         {
-            string pattern = @"([a-z]+)\s([a-z]+)";
-            foreach (string line in code)
+            for(int i = 0; i <= code.Length - 1; i++)
             {
-                foreach(Match i in Regex.Matches(line, pattern))
-                {
-                    switch (i.Groups[0].Value)
-                    {
-                        case "read":
-                            ActionRead.Read(i.Groups[1].Value);
-                            break;
-                        case "print":
-                            return "";
-                    }
+                string[] splitedString = code[i].Split(' ');
+
+                switch (splitedString[0])
+                {   
+                   case "read":
+                        ActionRead.Read(splitedString[1]);
+                        break;
+                    case "print":
+                        ActionPrint.Print(splitedString[1]);
+                        break;
+                    default:
+                        Math.MathParser(code[i]);
+                        break;
                 }
-
             }
-
-            return "";
         }
     }
 }

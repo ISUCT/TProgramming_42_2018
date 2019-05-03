@@ -17,9 +17,11 @@ namespace ASharp
 
         static void Main(string[] args)
         {
-            string path = "D:/ASharp/code.txt";
+            string path = "./code.txt";
 
             string[] code = CodeReader.ReadFile(path);
+            CodeParser parser = new CodeParser();
+            parser.Parse(code);
 
             Console.ReadKey();
         }

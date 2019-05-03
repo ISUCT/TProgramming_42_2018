@@ -1,0 +1,33 @@
+﻿using System;
+using System.Text.RegularExpressions;
+
+namespace ASharp
+{
+    class CodeParser
+    {
+        public string Parse(string[] code)
+        {
+            string pattern = @"([a-z]+)\s(\w+)";
+            foreach (string line in code)
+            {
+                foreach(Match i in Regex.Matches(line, pattern))
+                {
+                    switch (i.Groups[1].Value)
+                    {
+                        case "read":
+                            ActionRead.Read(i.Groups[2].Value);
+                            break;
+                        case "print":
+                            ActionPrint.Print(i.Groups[2].Value);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+            }
+
+            return "";
+        }
+    }
+}
