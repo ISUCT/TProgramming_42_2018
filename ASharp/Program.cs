@@ -9,9 +9,9 @@ namespace ASharp
 
         public static void SetVariable(string key, int value)
         {
-            if(!Program.Variables.ContainsKey(key))
+            if(!Variables.ContainsKey(key))
             {
-                Program.Variables.Add(key, value);
+                Variables.Add(key, value);
             }
         }
 
