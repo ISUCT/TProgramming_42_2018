@@ -10,7 +10,7 @@ namespace ASharp
         {
              if(Program.Variables.ContainsKey(action))
              {
-                 Console.WriteLine(Program.Variables[action]);
+                Console.WriteLine($"{action} = {Program.Variables[action]}");
              }
              else Console.WriteLine($"Переменной {action} не существует");
         }

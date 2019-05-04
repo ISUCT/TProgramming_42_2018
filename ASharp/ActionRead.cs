@@ -9,6 +9,7 @@ namespace ASharp
     {
         public static void Read(string action)
         {
+            Console.Write($"{action} = ");
             int number = Convert.ToInt32(Console.ReadLine());
             Program.SetVariable(action, number);
         }
