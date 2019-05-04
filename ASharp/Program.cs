@@ -6,12 +6,21 @@ namespace ASharp
     class Program
     {
         public static Dictionary<string, int> Variables = new Dictionary<string, int>();
+        public static Dictionary<string, int> Marks = new Dictionary<string, int>();
 
         public static void SetVariable(string key, int value)
         {
             if(!Variables.ContainsKey(key))
             {
                 Variables.Add(key, value);
+            }
+        }
+
+        public static void SetMark(string key, int value)
+        {
+            if(!Marks.ContainsKey(key))
+            {
+                Marks.Add(key, value);
             }
         }
 
