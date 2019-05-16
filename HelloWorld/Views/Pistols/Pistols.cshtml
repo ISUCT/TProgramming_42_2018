@@ -1,0 +1,22 @@
+@model IEnumerable<Pistol.Models.Pistol>
+@{
+    ViewData["Title"] = "Список пистолетов";
+}
+<h3>Пистолеты</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Марка</td>
+        <td>Калибр</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var pistol in Model)
+        {
+        <tr>
+            <td>@pistol.Name</td>
+            <td>@pistol.Kalibr</td>
+            <td>@pistol.Price</td>
+            <td><a href="~/Home/Buy/@pistol.Id">Купить</a></td>
+        </tr>
+    }
+</table>
