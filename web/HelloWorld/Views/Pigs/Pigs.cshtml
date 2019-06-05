@@ -1,0 +1,26 @@
+@model IEnumerable<HelloWorld.Models.Pig>
+@{
+    ViewData["Title"] = "Список Свиней";
+}
+
+		
+<h3>Свиньи</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Имя</td>
+        <td>Фермер</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var Pig in Model)
+        {
+        <tr>
+            <td>@Pig.Name</td>
+            <td>@Pig.Author</td>
+            <td>@Pig.Price</td>
+            <td><a href="~/Home/Buy/@Pig.Id">Купить</a></td>
+            <td> <a asp-action="Delete" asp-controller="PigApi" asp-route-id="@Pig.Id" href="~/Pigs/Delete/@Pig.Id">Удалить</a></td>
+           
+        </tr>
+    }
+</table>

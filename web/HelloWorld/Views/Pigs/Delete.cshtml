@@ -1,0 +1,31 @@
+@model  IEnumerable<HelloWorld.Models.Pig>
+@{
+      ViewData["Title"]  = "Удаление свиньи";
+}
+ 
+<div>
+    <dl class="dl-horizontal">
+       <tr>
+        <td>Имя</td>
+        <td>Фермер</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var Pig in Model)
+        {
+        <tr>
+            <td>@Pig.Name</td>
+            <td>@Pig.Author</td>
+            <td>@Pig.Price</td>
+        </tr>
+        }
+    </dl>
+ 
+    <div>
+        <form asp-controller="PigsApi" asp-action="Delete" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>
