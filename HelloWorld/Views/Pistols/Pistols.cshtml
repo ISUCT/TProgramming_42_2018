@@ -1,0 +1,24 @@
+@model IEnumerable<HelloWorld.Models.Pistol>
+@{
+    ViewData["Title"] = "Выбор пистолетов";
+}
+<h3>Пистолеты</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Название</td>
+        <td>Калибр</td>
+        <td>Цена</td>
+        <form><p><input name="a"> <input type="submit"></p></form>
+        <td></td>
+    </tr>
+    @foreach (var Pistol in Model)
+        {
+        <tr>
+            <td>@Pistol.Name</td>
+            <td>@Pistol.Kalibr</td>
+            <td>@Pistol.Price</td>
+            <td><a href="~/Home/Buy/@Pistol.Id">Купить</a></td>
+            <td><p style="text-align: center"><button>Удалить элемент</button></td>
+        </tr>
+    }
+</table>
