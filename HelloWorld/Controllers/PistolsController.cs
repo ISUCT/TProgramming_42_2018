@@ -1,7 +1,7 @@
 using System.Linq;
-using Pistol.Models;
+using HelloWorld.Models;
 using Microsoft.AspNetCore.Mvc;
-namespace Pistol.Controllers
+namespace HelloWorld.Controllers
 {
     public class PistolsController : Controller
     {

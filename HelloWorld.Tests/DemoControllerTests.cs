@@ -3,7 +3,7 @@ namespace HelloWorld.Tests
     using System;
     using Xunit;
     using Microsoft.AspNetCore.Mvc;
-    using Pistol.Controllers;
+    using HelloWorld.Controllers;
 
     public class DemoControllerTests
     {

@@ -1,4 +1,4 @@
-namespace Pistol.Models
+namespace HelloWorld.Models
 {
     using System;
     using System.Linq;
@@ -14,23 +14,23 @@ namespace Pistol.Models
                 context.Pistols.AddRange(
                                     new Pistol
                                     {
-                                        Id = 1,
-                                        Name = "War and peace",
-                                        Kalibr = "Tolstoy ",
+                                        // Id = 1,
+                                        Name = "Colt",
+                                        Kalibr = "0.45",
                                         Price = 600,
                                     },
                                     new Pistol
                                     {
-                                        Id = 2,
-                                        Name = "Clean code",
-                                        Kalibr = "Joel Spolsky",
+                                        // Id = 2,
+                                        Name = "Glock",
+                                        Kalibr = "9x19",
                                         Price = 550,
                                     },
                                     new Pistol
                                     {
-                                        Id = 3,
-                                        Name = "C#",
-                                        Kalibr = "Troellson",
+                                        // Id = 3,
+                                        Name = "Pm",
+                                        Kalibr = "9x18",
                                         Price = 500,
                                     });
                 context.SaveChanges();

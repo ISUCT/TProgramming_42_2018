@@ -1,10 +1,10 @@
-﻿namespace Pistol
+﻿namespace HelloWorld
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Pistol.Models;   // пространство имен моделей
+    using HelloWorld.Models;   // пространство имен моделей
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -13,7 +13,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
     using Swashbuckle.AspNetCore.Swagger;
-    
+
     public class Startup
     {
         public Startup(IHostingEnvironment env)

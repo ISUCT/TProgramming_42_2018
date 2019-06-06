@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-namespace Pistol.Models
+namespace HelloWorld.Models
 {
     public class PistolsContext : DbContext
     {
@@ -8,7 +8,7 @@ namespace Pistol.Models
             Database.EnsureCreated();
         }
 
-        public DbSet<Pistol> Pistol { get; set; }
+        public DbSet<Pistol> Pistols { get; set; }
 
     }
 }

@@ -1,7 +1,7 @@
-namespace Pistol.Controllers
+namespace HelloWorld.Controllers
 {
     using System.Linq;
-    using Pistol.Models;
+    using HelloWorld.Models;
     using Microsoft.AspNetCore.Mvc;
 
     public class DemoController : Controller
