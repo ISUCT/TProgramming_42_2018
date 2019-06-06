@@ -1,28 +1,28 @@
-@model  IEnumerable<HelloWorld.Models.Pig>
+@model HelloWorld.Models.Pig
 @{
-      ViewData["Title"]  = "Удаление свиньи";
+     ViewBag.Title = "Удаление свиньи";
 }
  
 <div>
     <dl class="dl-horizontal">
-       <tr>
-        <td>Имя</td>
-        <td>Фермер</td>
-        <td>Цена</td>
-        <td></td>
-    </tr>
-    @foreach (var Pig in Model)
-        {
-        <tr>
-            <td>@Pig.Name</td>
-            <td>@Pig.Author</td>
-            <td>@Pig.Price</td>
-        </tr>
-        }
+        <dt>Имя</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+ 
+        <dt>Фермер</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+ 
+        <dt>Цена</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
     </dl>
  
     <div>
-        <form asp-controller="PigsApi" asp-action="Delete" method="post">
+        <form asp-controller="PigApi" asp-action="Delete" method="post">
             <div class="form-group">
                 <input type="submit" class="btn btn-default" value="Удалить" />
             </div>

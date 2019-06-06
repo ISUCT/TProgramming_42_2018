@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HelloWorld.Migrations
 {
     [DbContext(typeof(PigsContext))]
-    [Migration("20190605112930_initial")]
+    [Migration("20190606110835_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

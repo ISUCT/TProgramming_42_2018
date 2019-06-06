@@ -38,6 +38,18 @@ namespace HelloWorld.Controllers
             return new ObjectResult(Pig);
         }
         //удаление 
+        [HttpDelete("{id}")]
+[ActionName("Delete")]
+public  IActionResult ConfirmDelete(int? id)
+{
+    if (id != null)
+    {
+        Pig pig =  db.Pigs.FirstOrDefault(p => p.Id == id);
+        if (pig != null)
+            return View(pig);
+    }
+    return NotFound();
+}
        
         [HttpPost]
 public  IActionResult Delete(int? id)

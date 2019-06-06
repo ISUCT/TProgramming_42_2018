@@ -18,9 +18,14 @@
             <td>@Pig.Name</td>
             <td>@Pig.Author</td>
             <td>@Pig.Price</td>
-            <td><a href="~/Home/Buy/@Pig.Id">Купить</a></td>
-            <td> <a asp-action="Delete" asp-controller="PigApi" asp-route-id="@Pig.Id" href="~/Pigs/Delete/@Pig.Id">Удалить</a></td>
+           <!-- <td><a href="~/Home/Buy/@Pig.Id">Купить</a></td>-->
+            <!--<td> <a  href="~/Views/Pigs/Delete/@Pig.Id">Удалить</a></td>-->
+            <td>
+               <form action="~\Pigs\Delete\@Pig.Id" method="GET" >
+                  <button>Удалить</button>
            
+               </form>
+            </td>
         </tr>
     }
 </table>
