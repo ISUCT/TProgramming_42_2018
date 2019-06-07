@@ -5,11 +5,11 @@ using HelloWorld.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using System.Text;
-
-//using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace HelloWorld.Controllers
 {
+
     
     // [Route("api/[controller]")]
     [Route("api/Pigs")]
@@ -37,21 +37,10 @@ namespace HelloWorld.Controllers
                 return NotFound();
             return new ObjectResult(Pig);
         }
+        
         //удаление 
+
         [HttpDelete("{id}")]
-[ActionName("Delete")]
-public  IActionResult ConfirmDelete(int? id)
-{
-    if (id != null)
-    {
-        Pig pig =  db.Pigs.FirstOrDefault(p => p.Id == id);
-        if (pig != null)
-            return View(pig);
-    }
-    return NotFound();
-}
-       
-        [HttpPost]
 public  IActionResult Delete(int? id)
 {
     if (id != null)
@@ -61,13 +50,34 @@ public  IActionResult Delete(int? id)
         {
             db.Pigs.Remove(pig);
              db.SaveChanges();
-           // return RedirectToActionResult("Index");
+            return Ok("Pigs");
         }
     }
     return NotFound();
 }
-      //редоктирование
 
-       
+      //редоктирование
+     [HttpGet]
+      public IActionResult Edit(int? id)
+{
+    if(id!=null)
+    {
+        Pig pig = db.Pigs.FirstOrDefault(p=>p.Id==id);
+        if (pig != null)
+            return View(pig);
+    }
+    return NotFound();
+}
+[HttpPost]
+public IActionResult Edit(Pig pig)
+{
+    db.Pigs.Update(pig);
+    db.SaveChanges();
+   // return Ok("Pigs");
+   return RedirectToAction("Index");
+}
+
+
+
     }
 }

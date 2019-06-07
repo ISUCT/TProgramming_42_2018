@@ -16,12 +16,15 @@
 
     public class Startup
     {
+        
+        
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             Configuration = builder.Build();
+             
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -41,6 +44,7 @@
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+            
 
         }
 
