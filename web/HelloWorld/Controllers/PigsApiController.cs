@@ -40,6 +40,7 @@ namespace HelloWorld.Controllers
         
         //удаление 
 
+
         [HttpDelete("{id}")]
 public  IActionResult Delete(int? id)
 {
@@ -50,13 +51,14 @@ public  IActionResult Delete(int? id)
         {
             db.Pigs.Remove(pig);
              db.SaveChanges();
-            return Ok("Pigs");
+        return RedirectToAction("Pigs");
         }
     }
     return NotFound();
 }
 
       //редоктирование
+
      [HttpGet]
       public IActionResult Edit(int? id)
 {
@@ -73,10 +75,25 @@ public IActionResult Edit(Pig pig)
 {
     db.Pigs.Update(pig);
     db.SaveChanges();
-   // return Ok("Pigs");
-   return RedirectToAction("Index");
+  
+   return RedirectToAction("Pigs");
 }
-
+//добавление 
+public IActionResult Pigs()
+{
+    return View( db.Pigs.ToList());
+}
+public IActionResult Create()
+{
+    return View();
+}
+[HttpPost]
+public IActionResult Create(Pig pig)
+{
+    db.Pigs.Add(pig);
+     db.SaveChanges();
+    return RedirectToAction("Pigs");
+}
 
 
     }

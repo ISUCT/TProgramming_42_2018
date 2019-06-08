@@ -5,6 +5,7 @@
 
 		
 <h3>Свиньи</h3>
+ 
 <table class="table-condensed">
     <tr>
         <td>Имя</td>
@@ -19,19 +20,25 @@
             <td>@Pig.Author</td>
             <td>@Pig.Price</td>
            <!-- <td><a href="~/Home/Buy/@Pig.Id">Купить</a></td>-->
-           <!-- <td> <a asp-action="Delete" asp-controller="PigApi" asp-route-id="@Pig.Id" href="~/Views/Pigs/Delete/@Pig.Id">Удалить</a></td>-->
+         <!--  <td> <a asp-action="Delete" asp-controller="PigApi" asp-route-id="@Pig.Id" >Удалить</a></td>-->
            <td>
-               <form action="~\Pigs\Delete\@Pig.Id" method="GET" >
+               <form action="~/Pigs/Delete/@Pig.Id" method="GET" >
                   <button>Удалить</button>
            
                </form>
             </td>
             <td>
-               <form action="~\Pigs\Edit\@Pig.Id" method="GET" >
+               <form action="./Pigs/Edit/@Pig.Id" method="GET" >
                   <button>Изменить</button>
            
                </form>
             </td>
         </tr>
     }
+   
 </table>
+ <p><form action="~/Pigs/Create" method="GET"  >
+                  <button>Добавить свинью</button>
+           
+               </form></p>
+             
