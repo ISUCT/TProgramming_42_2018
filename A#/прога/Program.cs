@@ -89,7 +89,7 @@ namespace ConsoleApp5
             {
                if(Oshibki.Okaziia(s[i]) == "Okaziia")
                {
-                   Console.WriteLine($"Оказия, ошибка в строке {i}");
+                   Console.WriteLine($"Оказия, ошибка в строке {i+1}");
                  throw new Exception();
                }
             }
