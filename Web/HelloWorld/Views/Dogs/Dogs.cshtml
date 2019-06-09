@@ -1,0 +1,32 @@
+@model IEnumerable<HelloWorld.Models.Dog>
+@{
+    ViewData["Title"] = "Список Собакенов";
+}
+
+		
+<h3>Собачки</h3>
+ 
+<table class="table-condensed">
+    <tr>
+        <td>Имя</td>
+        <td>Заводчик</td>
+        <td>Цена</td>
+        <td></td>
+    </tr>
+    @foreach (var Dog in Model)
+        {
+        <tr>
+            <td>@Dog.Name</td>
+            <td>@Dog.Author</td>
+            <td>@Dog.Price</td>
+           <td>
+               <form action="~/Dogs/Delete/@Dog.Id" method="GET" >
+                  <button>Удалить</button>
+           
+               </form>
+            </td>
+        </tr>
+    }
+   
+</table>
+             
