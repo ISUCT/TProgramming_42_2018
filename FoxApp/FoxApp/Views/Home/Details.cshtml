@@ -1,0 +1,18 @@
+﻿@model FoxApp.Models.Fox
+@{
+    ViewBag.Title = Model.Name;
+}
+<h2>Лисица @Model.Name</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Вид</dt>
+        <dd>@Model.Breed</dd>
+
+        <dt>Описание</dt>
+        <dd>@Model.Description</dd>
+
+        <dt>Возраст</dt>
+        <dd>@Model.Age</dd>
+        @*<dt><a href="@Model.Id">Ссылка</a></dt>*@
+    </dl>
+</div>

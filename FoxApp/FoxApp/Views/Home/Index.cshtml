@@ -1,0 +1,21 @@
+﻿@model IEnumerable<FoxApp.Models.Fox>
+@{
+    ViewBag.Title = "Все лисицы";
+}
+<a asp-action="Create">Добавить лисицу</a>
+
+<table class="table">
+    @*<tr><td>Имя</td><td>Вид</td><td>Описание</td></tr>*@
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>
+                <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Подробнее</a> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
+<img src="https://img.macos.ms/2015.12-JP-Fox/LR2015.12-JP-Fox-1.jpg" class="img-fluid">
