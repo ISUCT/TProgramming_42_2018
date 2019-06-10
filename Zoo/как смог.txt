@@ -1,0 +1,56 @@
+dotnet new mvc -n *** -- создать веб приложение mvc(model views controller) будт папка с проектом, *** = название
+cd ***
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite -- подключить EntityFrameworkCore и Sqlite
+В папке Models создайте файл Model.cs, содержащий следующий код:
+
+
+
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+
+namespace Zoo.Models
+{
+    public class AnimalsContext : DbContext
+    {
+        public AnimalsContext(DbContextOptions<AnimalsContext> options)
+            : base(options)
+        { }
+
+        public DbSet<Animal> Animals { get; set; }
+    }
+
+    public class Animal
+    {
+        public int AnimalId { get; set; }
+        public string Name { get; set; }
+        public string Species { get; set; }
+        public int Age { get; set; }
+    }
+}
+
+
+сия хуйня - это модель, т.е. предметная область, тут просто менять имена остается/добавлять сущности и прочее говно
+
+
+Чтобы сделать контекст AnimalsContext доступным контроллерам MVC, зарегистрируйте его как службу в Startup.cs. короче добавить зависимости (using)
+
+using ***.Models;
+using Microsoft.EntityFrameworkCore;
+
+отредактировать Startup.cs
+
+var connection = "Data Source=Animals.db";  -  имя базы данных
+services.AddDbContext<AnimalsContext>  -  контекст
+    (options => options.UseSqlite(connection));  -  дотнет, используй Sqlite!!!
+
+dotnet ef migrations add InitialCreate  --  добавить миграции
+dotnet ef database update  --  создать базу данных и применить к ней созданную миграцию
+
+создание контроллера (оно само)
+
+dotnet tool install -g dotnet-aspnet-codegenerator  --  установить генератор кода(если уже есть, то все ок)
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design  --  создать зависимость
+dotnet restore  --  удостовериться что все хорошо
+dotnet aspnet-codegenerator controller -name BlogsController -m Blog -dc BloggingContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries  -- и понеслась
+
+dotnet run  --  если все хорошо, то заработает (перейти в ~/Animals)
