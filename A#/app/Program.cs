@@ -10,7 +10,7 @@ namespace ASharp
         public static void Main()
         {
             Console.WriteLine("введите полный путь к файлу");
-            string roadToFile = Console.ReadLine(); // "J:\\Аулов Дмитрий\\A#\\texts.txt" или "E:\\Аулов Дмитрий\\A#\\texts.txt"
+            string roadToFile = Console.ReadLine(); 
 
             string[] linesOfFile = File.ReadAllLines(roadToFile);
             string allTextOfProgram = LinesToString(linesOfFile);
