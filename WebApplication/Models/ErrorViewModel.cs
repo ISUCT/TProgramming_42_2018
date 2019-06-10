@@ -2,10 +2,12 @@ using System;
 
 namespace WebApplication.Models
 {
-    public class ErrorViewModel
-    {
-        public string RequestId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+     //иерархия наследования Abp.Сеть.Mvc.Модели .ErrorViewModel
+    public class ErrorViewModel//модель исключений
+    {
+        public string RequestId { get; set; }//параметр???
+
+        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);//IsNullOrEmpty проверяет являится ли строка null
     }
 }

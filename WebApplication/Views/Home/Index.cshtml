@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "Свиньи";
 }
-<a asp-action="Create">Добавить Свинью</a>
 <table class="table">
     <tr>
         <td>Имя</td>
@@ -15,11 +14,9 @@
             <td>@Pig.Name</td>
             <td>@Pig.Age</td>
             <td>@Pig.Price</td>
-            <td>
-            <a asp-action="Edit" asp-controller="Home" asp-route-id="@Pig.Id">Изменить</a> |
-            <a asp-action="Delete" asp-controller="Home" asp-route-id="@Pig.Id">Удалить</a>
-            </td>
+            <td><a asp-action="Edit" asp-controller="Home" asp-route-id="@Pig.Id">Изменить</a></td>
+            <td><a asp-action="Delete" asp-controller="Home" asp-route-id="@Pig.Id">Удалить</a></td> 
         </tr>
     }
 </table>
-
+<p><a asp-action="Create">Добавить Свинью</a></p>

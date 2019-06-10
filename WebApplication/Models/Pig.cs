@@ -7,6 +7,7 @@ namespace WebApplication.Models
 {
     public class Pig
     {
+        //общая логика которая будет в базе данных, т.е. определяет столбцы в БД 
         public int Id { get; set; }
 
         public string Name { get; set; }
