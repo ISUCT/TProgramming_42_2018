@@ -2,9 +2,9 @@
 @{
     ViewBag.Title = "Все смартфоны";
 }
-<a asp-action="Create">Добавить модель телевизора</a>
+<a asp-action="Create" style="" class="button">Добавить модель телевизора</a>
 <table class="table">
-    <tr><td>Модель</td><td>Возраст</td><td>Цена</td></tr>
+    <tr><td>Модель</td><td>Возраст</td><td>Цена</td><td></td></tr>
     @foreach (var item in Model)
     {
         <tr>
