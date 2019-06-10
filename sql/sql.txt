@@ -1,0 +1,9 @@
+1)select title from Movie where director ="Steven Spielberg";
+2)select distinct year from Rating, Movie where stars >= 4 and Movie.mID=Rating.mID order by year;
+3)select title from Movie where Movie.mID not in (select Rating.mID from Rating);
+4)select name from Reviewer, Rating where Reviewer.rID=Rating.rID and Rating.ratingDate is null;
+5)select distinct Reviewer.name, Movie.title, Rating.stars, Rating.ratingDate from (Movie join Rating) join Reviewer on Rating.mID=Movie.mID and Rating.rID=Reviewer.rID order by Reviewer.name, Movie.title, Rating.stars;
+6)select distinct Reviewer.name, Movie.title from Movie, Reviewer, Rating R1,Rating R2 where R1.rID=Reviewer.rID and Movie.mID=R1.mID and R1.stars>R2.stars and R1.ratingDate > R2.ratingDate and (R1.rID=R2.rId and R1.ratingDate <> R2.ratingDate) and R1.ratingDate is not null and R2.ratingDate is not null and (R1.mID = R2.mId and R1.ratingDate <>R2.ratingDate);
+7)select title, max(stars) from Rating, Movie where Rating.mID = Movie.mID group by Rating.mID;
+8)select distinct title, avg(stars) from Movie, Rating where Movie.mID = Rating.mID group by title order by avg(stars) desc;
+9)select distinct name from Rating, Reviewer where Rating.rID = Reviewer.rID and stars >= 3;

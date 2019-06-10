@@ -61,6 +61,9 @@ namespace ConsoleApp1
                 l.GetInfo();
             }
 
+            Date td = new Date();
+            DateTime bd = new DateTime(1999, 18, 8);
+            Console.WriteLine("vozrast = {bd.Vozrast(bd)}");
             Console.Read();
         }
 
