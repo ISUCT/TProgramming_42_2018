@@ -17,3 +17,4 @@ namespace WebApplication.Models
         public int Price { get; set; }
     }
 }
+

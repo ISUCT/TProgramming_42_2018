@@ -14,11 +14,14 @@ namespace WebApplication
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();//Build -создает хост IWebHost,Run()-запускает IWebHost
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-    }
+            WebHost.CreateDefaultBuilder(args)//Непосредственно создание IWebHostBuilder 
+                .UseStartup<Startup>();//устанавливается стартовый класс приложения - класс Startup, с которого и будет начинаться обработка входящих запросов.
+    } 
+    
 }
+
+

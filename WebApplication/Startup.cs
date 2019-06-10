@@ -20,7 +20,8 @@ namespace WebApplication
          и в конце метод Configure(). Эти методы вызываются средой выполнения ASP.NET. */
 
 
-
+/* appsettings.json - файл конфигурыции.Чтобы получить конфигурацию из файла appsettings.json, достаточно передать в конструктор класса объект IConfiguration, 
+который и будет содержать все настройки. И затем полученную конфигурацию можно использовать в приложении.*/
         public Startup(IConfiguration configuration)//конструктор
         {
             Configuration = configuration;//переопределение конфигурации???
