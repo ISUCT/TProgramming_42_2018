@@ -1,0 +1,53 @@
+﻿@model FoxApp.Models.Fox
+@{
+    ViewBag.Title = "Добавление лисиц";
+}
+
+<style>
+    a {
+        color: #ffffff; /* Цвет обычной ссылки */
+        text-decoration: none; /* Убираем подчеркивание у ссылок */
+    }
+
+        a:visited {
+            color: #ffffff; /* Цвет посещённой ссылки */
+        }
+
+        a:hover {
+            color: #ffffff; /* Цвет ссылки при наведении на нее курсора мыши */
+            text-decoration: none;
+        }
+</style>
+<style>
+    body {
+        background: #333; /* Цвет фона */
+        color: #ffffff; /* Цвет текста */
+    }
+</style>
+<style>
+    td {
+        color: #ffffff; /* Цвет текста */
+    }
+</style>
+
+<form asp-action="create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Имя</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Breed" class="control-label">Вид</label>
+        <input type="text" asp-for="Breed" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label">Описание</label>
+        <input type="text" asp-for="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Age" class="control-label">Возраст</label>
+        <input type="number" asp-for="Age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Готово" class="btn btn-danger" />
+    </div>
+</form>

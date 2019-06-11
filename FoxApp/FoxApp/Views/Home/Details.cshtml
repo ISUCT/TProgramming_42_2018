@@ -1,0 +1,52 @@
+﻿@model FoxApp.Models.Fox
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<style>
+    a {
+        color: #ffffff; /* Цвет обычной ссылки */
+        text-decoration: none; /* Убираем подчеркивание у ссылок */
+    }
+
+        a:visited {
+            color: #ffffff; /* Цвет посещённой ссылки */
+        }
+
+        a:hover {
+            color: #ffffff; /* Цвет ссылки при наведении на нее курсора мыши */
+            text-decoration: none;
+        }
+</style>
+<style>
+    body {
+        background: #333; /* Цвет фона */
+        color: #ffffff; /* Цвет текста */
+    }
+</style>
+<style>
+    td {
+        color: #ffffff; /* Цвет текста */
+    }
+</style>
+
+<h2>Лисица @Model.Name</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Вид</dt>
+        @*<div class="alert alert-success" role="alert">
+                Вид
+            </div>*@
+        <dd>@Model.Breed</dd>
+
+        <dt>Описание</dt>
+        @*<div class="alert alert-primary" role="alert">
+                Описание
+            </div>*@
+        <dd>@Model.Description</dd>
+
+        <dt>Возраст</dt>
+        <dd>@Model.Age</dd>
+        @*<dt><a href="@Model.Id">Ссылка</a></dt>*@
+    </dl>
+</div>

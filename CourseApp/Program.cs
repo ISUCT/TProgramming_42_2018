@@ -53,6 +53,22 @@ namespace CourseApp
                 i.GetInfo();
             }
 
+            Console.WriteLine(one.Kus());
+
+            Fox[] fox = new Fox[] { one, two };
+            Array.Sort(fox);
+
+            foreach (Fox f in fox)
+            {
+                Console.WriteLine("{0} - {1}", f.Name, f.Age);
+            }
+
+            GetAge date = new GetAge();
+            DateTime dateBorn = new DateTime(1997, 02, 08);
+            DateTime dateToday = new DateTime(2019, 03, 18);
+            Console.WriteLine();
+            Console.WriteLine(date.Get(dateBorn, dateToday));
+
             Console.Read();
         }
     }
