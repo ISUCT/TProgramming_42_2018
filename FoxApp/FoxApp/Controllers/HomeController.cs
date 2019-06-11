@@ -8,7 +8,10 @@ namespace FoxApp.Controllers
 {
     public class HomeController : Controller
     {
-        private FoxxContext db;
+        private FoxxContext db;  //Для взаимодействия с базой данных в контроллере определяется переменная контекст
+                                 //данных FoxxContext db. Причем поскольку в классе Startup в методе ConfigureServices 
+                                 //контекст данных устанавливается как сервис, то в конструкторе контроллера мы можем 
+                                 //получить переданный контекст данных.
         public HomeController(FoxxContext context)
         {
             db = context;
@@ -16,7 +19,7 @@ namespace FoxApp.Controllers
         //Создание
         public async Task<IActionResult> Index()
         {
-            return View(await db.Foxes.ToListAsync());
+            return View(await db.Foxes.ToListAsync()); // Получаем объекты из бд, создаём из них список и передаём в представление.
         }
         public IActionResult Create()
         {
@@ -26,7 +29,7 @@ namespace FoxApp.Controllers
         public async Task<IActionResult> Create(Fox fox)
         {
             db.Foxes.Add(fox);
-            await db.SaveChangesAsync();
+            await db.SaveChangesAsync(); //Добавление данных в базу
             return RedirectToAction("Index");
         }
         //Детали
@@ -34,7 +37,9 @@ namespace FoxApp.Controllers
         {
             if (id != null)
             {
-                Fox fox = await db.Foxes.FirstOrDefaultAsync(p => p.Id == id);
+                Fox fox = await db.Foxes.FirstOrDefaultAsync(p => p.Id == id); //Метод получает id объекта, 
+                                                                               //о котором надо вывести информацию. 
+                                                                            //Затем найденный объект передается в представление. 
                 if (fox != null)
                     return View(fox);
             }
@@ -60,7 +65,7 @@ namespace FoxApp.Controllers
         }
         //Удаление
         [HttpGet]
-        [ActionName("Delete")]
+        [ActionName("Delete")] //Данный атрибут указывает, что этот метод также относится к действию Delete
         public async Task<IActionResult> ConfirmDelete(int? id)
         {
             if (id != null)
@@ -71,21 +76,6 @@ namespace FoxApp.Controllers
             }
             return NotFound();
         }
-
-        //[HttpPost]
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    if (id != null)
-        //    {
-        //        Fox fox = await db.Foxes.FirstOrDefaultAsync(p => p.Id == id);
-        //        if (fox != null)
-        //        {
-        //            db.Foxes.Remove(fox);
-        //            await db.SaveChangesAsync();
-        //            return RedirectToAction("Index");
-        //        }
-        //    }
-        //    return NotFound();
         [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {

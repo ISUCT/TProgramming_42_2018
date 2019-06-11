@@ -18,11 +18,13 @@ namespace FoxApp
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services) //Добавление контекста данных в виде сервиса позволит 
+                                                                   //затем получать его в конструкторе контроллера через
+                                                                   //механизм внедрения зависимостей.
         {
             // получаем строку подключения из файла конфигурации
             string connection = Configuration.GetConnectionString("DefaultConnection");
-            // добавляем контекст MobileContext в качестве сервиса в приложение
+            // добавляем контекст FoxxContext в качестве сервиса в приложение
             services.AddDbContext<FoxxContext>(options =>
                 options.UseSqlServer(connection));
             services.AddMvc();
