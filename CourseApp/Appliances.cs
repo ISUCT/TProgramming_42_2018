@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CourseApp
 {
-    public abstract class Appliances
+    public abstract class Appliances : IStatus
     {
         private int model;
         private int age;

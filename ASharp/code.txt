@@ -1,0 +1,7 @@
+read N
+R = 1
+step:
+  R = R * N
+  N = N - 1
+if N > 1 goto step
+print R

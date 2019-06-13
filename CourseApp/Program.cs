@@ -39,6 +39,10 @@ namespace CourseApp
                 i.GetInfo();
             }
 
+            GetAge getAge = new GetAge();
+            DateTime birthDate = new DateTime(1975, 10, 30);
+            DateTime nowDate = new DateTime(2019, 03, 11);
+            Console.WriteLine(getAge.GetInfo(birthDate, nowDate));
             Console.ReadKey();
         }
     }

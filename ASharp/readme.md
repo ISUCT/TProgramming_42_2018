@@ -1,0 +1,1 @@
+"if goto" worked only like repeat
