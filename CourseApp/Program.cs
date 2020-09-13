@@ -6,7 +6,7 @@ namespace CourseApp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Рудяков Анатолий Сергеевич");
             Console.ReadLine();
         }
     }
